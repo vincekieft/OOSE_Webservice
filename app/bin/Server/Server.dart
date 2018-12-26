@@ -21,7 +21,8 @@ class Server{
         .addMiddleware(shelf.logRequests())
         .addHandler(_onRequest);
 
-    _server = await io.serve(handler, 'localhost', this._port);
+    _server = await io.serve(handler, '0.0.0.0', this._port);
+    print("dingg4444555");
     print('Serving at http://${_server.address.host}:${_server.port}');
   }
 
