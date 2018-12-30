@@ -7,6 +7,8 @@ environment:
 dependencies:
   args: ^1.4.2
   shelf: ^0.7.2
+  sqljocky5: ^2.2.0
+
 
 #dev_dependencies:
 #  test: ^1.0.0
