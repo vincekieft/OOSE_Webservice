@@ -6,11 +6,20 @@ class ArrayUtils{
     return JoinList(array,separator);
   }
 
+  static JoinMapWritables<A ,T extends IWritable>(Map<A,T> map,String separator){
+    List<T> array = new List<T>();
+    map.forEach((A key, T value) => array.add(value));
+    return JoinWritables(array, separator);
+  }
+
   static JoinList<T extends Object>(List<T> array, String separator){
     String text = "";
+    array.removeWhere((value) => value == null); // filter out null
     for(int i = 0; i < array.length; i++){
       text += array[i].toString();
-      if(i < array.length - 1){text += separator;}
+      if (i < array.length - 1) {
+        text += separator;
+      }
     }
     return text;
   }

@@ -16,8 +16,8 @@ class DB{
     await _orm.Connect();
   }
 
-  static void Insert(dynamic model){
-    _orm.Insert(model);
+  static void Persist(dynamic model){
+    _orm.Persist(model);
   }
 
   static void Delete(){

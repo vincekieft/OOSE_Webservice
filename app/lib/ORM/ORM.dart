@@ -1,9 +1,14 @@
 import 'dart:mirrors';
 
-import 'package:OOSE/ORM/src/Adapters/IDatabaseAdapter.dart';
+import 'package:OOSE/ORM/src/DatabaseActions/InsertAction.dart';
+import 'package:OOSE/ORM/src/DatabaseAdapters/IDatabaseAdapter.dart';
+import 'package:OOSE/ORM/src/Result/QueryResult.dart';
+import 'package:OOSE/ORM/src/RuntimeModeReflection/RuntimeColumn.dart';
+import 'package:OOSE/ORM/src/Utils/QueryResultUtils.dart';
 import 'package:OOSE/QueryBuilder/QueryBuilder.dart';
+import 'src/RuntimeModeReflection/RuntimeTypeReflection.dart';
 
-export 'src/Adapters/MysqlAdapter.dart';
+export 'src/DatabaseAdapters/MysqlAdapter.dart';
 
 class ORM{
 
@@ -40,26 +45,8 @@ class ORM{
     _adapter.Disconnect();
   }
 
-  void Insert(dynamic model){
-    InstanceMirror mirror = reflect(model);
-    var decs = mirror.type.declarations;
-    Map<String,DeclarationMirror> testie = new Map();
-
-    for (DeclarationMirror v in decs.values) {
-      testie[MirrorSystem.getName(v.simpleName)] = v;
-    }
-
-    QueryBuilder builder = new QueryBuilder(model.runtimeType.toString());
-    InsertSection ins = builder.Insert();
-
-    for(String key in testie.keys){
-     if(testie.containsKey("_${key}")){
-       ins.AddValue(key, mirror.getField(new Symbol(key)).reflectee);
-     }
-    }
-
-    _adapter.Execute(builder.Write());
-
+  void Persist(dynamic model)async{
+    await new InsertAction(model, this).Call();
   }
 
   void Delete(){
@@ -70,8 +57,19 @@ class ORM{
 
   }
 
-  void Find(){
+  Future<List<T>> Execute<T>(String query) async{
+    List<dynamic> dynamicResults = await ExecuteDynamic(query, T);
+    List<T> typeResults = new List<T>();
+    dynamicResults.forEach((result)=> typeResults.add(result as T));
+    return typeResults;
+  }
 
+  Future<List<dynamic>> ExecuteDynamic(String query, Type type) async{
+    return QueryResultUtils.ConvertResultTo(await _adapter.Execute(query), type);
+  }
+
+  Future<QueryResult> ExecuteQueryResult(String query) async{
+    return await _adapter.Execute(query);
   }
 
   // Getters

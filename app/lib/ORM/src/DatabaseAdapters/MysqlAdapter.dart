@@ -1,3 +1,5 @@
+import 'package:OOSE/ORM/src/Result/QueryResult.dart';
+import 'package:OOSE/ORM/src/ResultAdapter/SqlJockyAdapter.dart';
 import 'IDatabaseAdapter.dart';
 import 'package:sqljocky5/sqljocky.dart';
 
@@ -25,8 +27,8 @@ class MysqlAdapter implements IDatabaseAdapter{
   }
 
   @override
-  dynamic Execute(String query) async {
-    return await _connection.execute(query);
+  Future<QueryResult> Execute(String query) async {
+    return new SqlJockyAdapter(await _connection.execute(query));
   }
 
 }
