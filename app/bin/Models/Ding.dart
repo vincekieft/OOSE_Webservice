@@ -1,7 +1,4 @@
-import 'package:OOSE/ORM/src/Annotations/Column.dart';
-import 'package:OOSE/ORM/src/Annotations/HasOne.dart';
-import 'package:OOSE/ORM/src/Annotations/Primary.dart';
-import 'package:OOSE/ORM/src/Annotations/Table.dart';
+import 'package:OOSE/ORM/ORM.dart';
 import 'User.dart';
 
 @Table("Ding")

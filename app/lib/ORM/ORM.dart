@@ -1,11 +1,18 @@
 import 'package:OOSE/ORM/src/Annotations/Base/RuntimeClassReflection.dart';
-import 'package:OOSE/ORM/src/DatabaseActions/FindCollectionAction.dart';
+import 'package:OOSE/ORM/src/DatabaseActions/InsertAction.dart';
 import 'package:OOSE/ORM/src/DatabaseAdapters/IDatabaseAdapter.dart';
 import 'package:OOSE/ORM/src/QueryBuilder/ORMQueryBuilder.dart';
 import 'package:OOSE/ORM/src/Result/QueryResult.dart';
-import 'package:OOSE/QueryBuilder/QueryBuilder.dart';
 
 export 'src/DatabaseAdapters/MysqlAdapter.dart';
+export 'src/Annotations/Column.dart';
+export 'src/Annotations/Association.dart';
+export 'src/Annotations/HasMany.dart';
+export 'src/Annotations/HasOne.dart';
+export 'src/Annotations/Primary.dart';
+export 'src/Annotations/Table.dart';
+export 'src/QueryBuilder/ORMQueryBuilder.dart';
+export 'src/QueryBuilder/ORMSelectSection.dart';
 
 class ORM{
 
@@ -43,29 +50,12 @@ class ORM{
     _adapter.Disconnect();
   }
 
-  Future<T> PersistResult<T>(dynamic model) async{
-    int lastID = await Persist(model);
-    if(lastID >= 0){
-      return await Find<T>(lastID);
-    }
-    return null; // ID does not exist
-  }
-
   ORMQueryBuilder StartQuery<T>(){
     return new ORMQueryBuilder<T>(this);
   }
 
-  Future<int> Persist(dynamic model) async{
-    //return await new InsertAction(model.runtimeType, this).Call(model);
-  }
-
-  Future<List<T>> FindCollection<T>(QueryBuilder baseBuilder){
-
-  }
-
-  Future<T> Find<T>(int id) async {
-    return (await new FindCollectionAction<T>(this).Call()).first;
-    //return await new FindAction<T>(this).Call().first;
+  Future<T> Persist<T>(dynamic model) async{
+    return await new InsertAction<T>(model, this).CallSingle();
   }
 
   void Delete(){

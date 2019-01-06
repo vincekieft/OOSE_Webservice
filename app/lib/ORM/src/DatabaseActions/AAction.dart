@@ -1,4 +1,3 @@
-import 'dart:mirrors';
 import 'package:OOSE/ORM/ORM.dart';
 import 'package:OOSE/ORM/src/Result/QueryParser.dart';
 import 'package:OOSE/ORM/src/Result/QueryResult.dart';
@@ -7,30 +6,37 @@ abstract class AAction<T>{
 
   // Private variables
   ORM _orm;
-  ClassMirror _mirror;
 
   AAction(ORM orm){
     _orm = orm;
-    _mirror = reflectClass(T);
   }
 
   // Public methods
+  Future<QueryResult> CallResult() async{
+    String query = await BuildQuery();
+    return await ExecuteQuery(query);
+  }
+
   Future<List<T>> Call() async{
-    String query = BuildQuery();
-    QueryResult result = await _ExecuteQuery(query);
+    QueryResult result = await CallResult();
     return new QueryParser<T>(result, _orm).ParseQuery();
   }
 
-  // Abstract methods
-  String BuildQuery();
+  Future<T> CallSingle() async{
+    List<T> results = await Call();
+    if(results.length > 0){ return results.first; }
+    return null;
+  }
 
-  // Private methods
-  Future<QueryResult> _ExecuteQuery(String query) async{
+  Future<QueryResult> ExecuteQuery(String query) async{
     return await _orm.ExecuteQueryResult(query);
   }
+
+
+  // Abstract methods
+  Future<String> BuildQuery();
 
   // Getters
   dynamic get ModelType => T;
   ORM get Orm => _orm;
-  ClassMirror get Mirror => _mirror;
 }

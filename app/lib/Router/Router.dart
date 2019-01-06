@@ -1,5 +1,6 @@
 library Router;
 
+import 'package:OOSE/JSON/JSON.dart';
 import 'package:shelf/shelf.dart';
 import './src/IController.dart';
 import 'dart:mirrors';
@@ -20,12 +21,13 @@ abstract class Router{
   }
 
   /// Route to a given path and call controller
-  Response Route(String path, String method){
+  Future<Response> Route(String path, String method) async{
     PathComparator comparator = _findPathMatch(path);
 
     if(comparator != null){
-      Object result = _invokeControllerMethod(comparator, method);
-      if(result != null) return new Response.ok(jsonEncode(result));
+      Object result = await _invokeControllerMethod(comparator, method);
+      print(result.runtimeType);
+      if(result != null) return new Response.ok(JSON.Encode(result));
     }
 
     return _notFoundResponse();
@@ -56,12 +58,12 @@ abstract class Router{
     return new Response.notFound("");
   }
 
-  Object _invokeControllerMethod(PathComparator comparator, String method){
+  Future<Object> _invokeControllerMethod(PathComparator comparator, String method) async{
     InstanceMirror mirror = reflect(comparator.Controller);
     Symbol methodSymbol = new Symbol(method);
 
     if(mirror.type.declarations.containsKey(methodSymbol)){
-      return mirror.invoke(methodSymbol, [comparator.Arguments]).reflectee;
+      return await mirror.invoke(methodSymbol, [comparator.Arguments]).reflectee;
     }
 
     return null;

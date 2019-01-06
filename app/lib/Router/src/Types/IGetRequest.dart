@@ -1,3 +1,3 @@
 abstract class IGetRequest{
-  Object GET(Map<String,dynamic> args);
+  Future<Object> GET(Map<String,dynamic> args);
 }

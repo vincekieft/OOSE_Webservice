@@ -54,14 +54,11 @@ class ORMQueryBuilder<T>{
   }
 
   Future<List<T>> Execute() async{
-    print(_builder.Write());
     return await new GenericAction<T>(_orm, this).Call();
   }
 
   Future<T> ExecuteSingle() async{
-    List<T> results = await Execute();
-    if(results.length > 0){return results.first;}
-    return null;
+    return await new GenericAction<T>(_orm, this).CallSingle();
   }
 
   // Private methods

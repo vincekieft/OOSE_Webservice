@@ -1,8 +1,5 @@
-import 'package:OOSE/ORM/src/Annotations/HasMany.dart';
+import 'package:OOSE/ORM/ORM.dart';
 import 'Ding.dart';
-import 'package:OOSE/ORM/src/Annotations/Column.dart';
-import 'package:OOSE/ORM/src/Annotations/Primary.dart';
-import 'package:OOSE/ORM/src/Annotations/Table.dart';
 
 @Table("User")
 class User{
@@ -18,4 +15,10 @@ class User{
 
   @HasMany("user_id")
   List<Ding> dingen;
+
+  Map<String, dynamic> toJson() =>
+      {
+        'name': name,
+        'email': tel,
+      };
 }

@@ -10,9 +10,13 @@ class QueryResult{
 
 
   // Public methods
+  void SetInsertedID(int insertId){
+    _insertId = insertId;
+  }
+
   void SetRows(List<QueryRow> rows, int insertId){
     _rows = rows;
-    _insertId = insertId;
+    SetInsertedID(insertId);
   }
 
   void SetFields(List<String> fields){

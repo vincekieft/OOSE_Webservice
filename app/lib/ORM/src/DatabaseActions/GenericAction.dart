@@ -12,7 +12,7 @@ class GenericAction<T> extends AAction<T>{
   }
 
   @override
-  String BuildQuery() {
+  Future<String> BuildQuery() async{
     return _builder.Write();
   }
 }

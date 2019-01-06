@@ -11,7 +11,7 @@ class OOSERouter extends Router implements IRouter{
   ]);
 
   @override
-  Response OnRequest(Request request) {
-    return Route(request.url.toString(),request.method);
+  Future<Response> OnRequest(Request request) async{
+    return await Route(request.url.toString(),request.method);
   }
 }
