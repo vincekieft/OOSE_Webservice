@@ -1,15 +1,21 @@
+import 'package:OOSE/ORM/src/Annotations/HasMany.dart';
+import 'Ding.dart';
+import 'package:OOSE/ORM/src/Annotations/Column.dart';
+import 'package:OOSE/ORM/src/Annotations/Primary.dart';
+import 'package:OOSE/ORM/src/Annotations/Table.dart';
+
+@Table("User")
 class User{
-  int _id;
-  String _name;
-  int _tel;
 
-  User(String name, int tel){
-    _name = name;
-    _tel = tel;
-  }
+  @Primary("id")
+  int id;
 
-  // Getters
-  int get id => _id;
-  String get name => _name;
-  int get tel => _tel;
+  @Column("name")
+  String name;
+
+  @Column("tel")
+  int tel;
+
+  @HasMany("user_id")
+  List<Ding> dingen;
 }

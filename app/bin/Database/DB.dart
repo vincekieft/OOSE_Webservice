@@ -16,19 +16,5 @@ class DB{
     await _orm.Connect();
   }
 
-  static void Persist(dynamic model){
-    _orm.Persist(model);
-  }
-
-  static void Delete(){
-
-  }
-
-  static void Update(){
-
-  }
-
-  static void Find(){
-
-  }
+  static ORM get orm => _orm;
 }

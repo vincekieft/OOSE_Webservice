@@ -1,17 +1,18 @@
+import 'package:OOSE/ORM/src/Annotations/Column.dart';
+import 'package:OOSE/ORM/src/Annotations/HasOne.dart';
+import 'package:OOSE/ORM/src/Annotations/Primary.dart';
+import 'package:OOSE/ORM/src/Annotations/Table.dart';
 import 'User.dart';
 
+@Table("Ding")
 class Ding{
-  int _id = 0;
-  String _ding;
-  User _user;
 
-  Ding(String ding, User user){
-    _ding = ding;
-    _user = user;
-  }
+  @Primary("id")
+  int id;
 
-  // Getters
-  int get id => _id;
-  String get ding => _ding;
-  User get user => _user;
+  @Column("ding")
+  String ding;
+
+  @HasOne("user_id")
+  User user;
 }

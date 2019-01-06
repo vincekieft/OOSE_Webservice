@@ -1,66 +1,66 @@
 import 'dart:mirrors';
+
 import 'package:OOSE/ORM/ORM.dart';
-import 'package:OOSE/ORM/src/Result/QueryResult.dart';
-import 'package:OOSE/ORM/src/RuntimeModeReflection/RuntimeColumn.dart';
-import 'package:OOSE/ORM/src/RuntimeModeReflection/RuntimeTypeReflection.dart';
 import 'package:OOSE/QueryBuilder/QueryBuilder.dart';
 import 'AAction.dart';
 
 class InsertAction extends AAction{
 
-  InsertAction(model, ORM orm) : super(model, orm);
+  InsertAction(ORM orm) : super(orm);
 
-
-  Future<int> Call() async {
-    RuntimeTypeReflection reflection = new RuntimeTypeReflection(Model, Orm);
-    QueryBuilder builder = new QueryBuilder(Model.runtimeType.toString());
-    await reflection.InitializeInformation();
+  /*
+  Future<int> Call(dynamic model) async {
+    RuntimeTypeReflection reflection = await Orm.GetRuntimeReflection(ModelType);
+    QueryBuilder builder = new QueryBuilder(ModelType.toString());
+    InstanceMirror instanceMirror = reflect(model);
 
     for (RuntimeColumn column in reflection.Columns) {
-      await AddInsertValue(builder, column);
+      await AddColumnToBuilder(builder, column, instanceMirror);
     }
 
-    return (await Orm.ExecuteQueryResult(builder.Write())).InsertId;
+    dynamic result = await Orm.ExecuteQueryResult(builder.Write());
+    return (result != null)? result.InsertId : -1;
   }
+  */
 
-  void AddInsertValue(QueryBuilder builder, RuntimeColumn column) async{
-    InsertSection insert = builder.Insert();
+  /*
+  void AddColumnToBuilder(QueryBuilder builder, RuntimeColumn column, InstanceMirror instanceMirror) async{
+    String columnName = column.Column;
+    String valueColumnName = _FormatVariableNameToGetter(column.Variable);
+    dynamic overrideValue = null;
 
-    if(column.IsPrimary){
-      //continue;
-      insert.AddValue(column.Constraint.ColumnName, this.Mirror.getField(new Symbol(column.Column)));
-    } // Skip column since its primary (NOTE: assumes primaries are auto incremented. Might need to change this)
+    if(column.IsPrimary || column.IsAssociation){ columnName = column.Constraint.ColumnName; } // Set column name to constraint column
 
     if(column.IsAssociation){
-      int id = await new InsertAction(this.Mirror.getField(new Symbol(column.Column)).reflectee, Orm).Call();
-      insert.AddValue(column.Constraint.ColumnName, id);
-    } else {
-      insert.AddValue(column.Column, this.Mirror
-          .getField(new Symbol(column.Column))
-          .reflectee);
+      dynamic association = instanceMirror.getField(new Symbol(valueColumnName)).reflectee;
+      //overrideValue = await new InsertAction(column.RuntimeType, Orm).Call(association);
+      valueColumnName = null;
+    }
+
+    InsertValueToBuilder(builder, columnName, valueColumnName, instanceMirror, overrideValue);
+  }
+  */
+
+  void InsertValueToBuilder(QueryBuilder builder, String column, String valueColumn, InstanceMirror instanceMirror, [dynamic overrideValue]){
+    if(instanceMirror.reflectee != null) {
+      dynamic value = (valueColumn != null) ? instanceMirror
+          .getField(new Symbol(valueColumn))
+          .reflectee : overrideValue;
+
+      if (value != null) { // Only insert if not null
+        InsertSection insert = builder.Insert();
+        insert.AddValue(column, value);
+      }
     }
   }
 
-  String SelectLastQuery(RuntimeTypeReflection reflection){
-    QueryBuilder selectLastBuilder = new QueryBuilder("");
-    selectLastBuilder.Select().SelectSingleFunction("LAST_INSERT_ID", "LastID");
-    
-    QueryBuilder selectModelBuilder = new QueryBuilder(reflection.InstanceType.toString());
-    SelectSection select = selectModelBuilder.Select();
-    WhereSection where = selectModelBuilder.Where();
+  String _FormatVariableNameToGetter(String variable){
+    //return variable.substring(RuntimeTypeReflection.VARIABLE_IDENTIFIER.length,variable.length);
+  }
 
-    for (RuntimeColumn value in reflection.Columns) {
-      if(value.IsPrimary){
-        where.Equal(value.Column, selectLastBuilder.WriteAsSubquery());
-      }
-
-      if(value.IsAssociation){
-        select.SetColumn(value.Constraint.ColumnName);
-      } else {
-        select.SetColumn(value.Column);
-      }
-    }
-
-    return selectModelBuilder.Write();
+  @override
+  String BuildQuery() {
+    // TODO: implement BuildQuery
+    return null;
   }
 }

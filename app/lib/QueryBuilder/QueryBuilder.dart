@@ -11,6 +11,7 @@ import 'src/Utils/ArrayUtils.dart';
 export 'package:OOSE/QueryBuilder/src/QuerySections/WhereSection.dart';
 export 'package:OOSE/QueryBuilder/src/QuerySections/SelectSection.dart';
 export 'package:OOSE/QueryBuilder/src/QuerySections/InsertSection.dart';
+export 'package:OOSE/QueryBuilder/src/QuerySections/JoinSection.dart';
 
 class QueryBuilder{
 
@@ -18,21 +19,21 @@ class QueryBuilder{
   Map<Type, IWritable> _sections = new Map<Type, IWritable>();
   List<String> _table = new List<String>();
 
-  QueryBuilder(String table){
-    _AddTargetTable(table);
+  QueryBuilder([String table = null]){
+    if(table != null){ _AddTargetTable(table); }
   }
 
   // Section methods
   SelectSection Select(){
-    return _ensureSection<SelectSection>();
+    return EnsureSection<SelectSection>();
   }
 
   WhereSection Where(){
-    return _ensureSection<WhereSection>();
+    return EnsureSection<WhereSection>();
   }
 
   InsertSection Insert(){
-    return _ensureSection<InsertSection>();
+    return EnsureSection<InsertSection>();
   }
 
   JoinSection LeftJoin(String table){
@@ -56,6 +57,10 @@ class QueryBuilder{
     return _ensureSectionArgs<JoinSection>([type, tableIndex, this]);
   }
 
+  T EnsureSection<T extends IWritable>(){
+    return _ensureSectionArgs<T>([this]);
+  }
+
   // Get methods
   String GetTable(int index){
     return _table[index];
@@ -69,16 +74,6 @@ class QueryBuilder{
     return _table.indexOf(table);
   }
 
-  // Get / Set
-  String get RootTable{
-    return _table.first;
-  }
-
-  // Private methods
-  T _ensureSection<T extends IWritable>(){
-    return _ensureSectionArgs<T>([this]);
-  }
-
   T _ensureSectionArgs<T extends IWritable>(List args){
     Type type = T;
     if(!_sections.containsKey(type)) {
@@ -88,8 +83,14 @@ class QueryBuilder{
     return _sections[type];
   }
 
+  // Get / Set
+  String get RootTable{
+    return _table.first;
+  }
+
   // Write Query
   String Write([semicolon = true]){
+    if(_sections.length <= 0){semicolon = false;} // Disable adding semicolon when query will be empty
     String query = "${ArrayUtils.JoinMapWritables(_sections, " ")}";
     if(semicolon){query += ";";}
     return query;

@@ -1,12 +1,9 @@
-import 'dart:mirrors';
-
-import 'package:OOSE/ORM/src/DatabaseActions/InsertAction.dart';
+import 'package:OOSE/ORM/src/Annotations/Base/RuntimeClassReflection.dart';
+import 'package:OOSE/ORM/src/DatabaseActions/FindCollectionAction.dart';
 import 'package:OOSE/ORM/src/DatabaseAdapters/IDatabaseAdapter.dart';
+import 'package:OOSE/ORM/src/QueryBuilder/ORMQueryBuilder.dart';
 import 'package:OOSE/ORM/src/Result/QueryResult.dart';
-import 'package:OOSE/ORM/src/RuntimeModeReflection/RuntimeColumn.dart';
-import 'package:OOSE/ORM/src/Utils/QueryResultUtils.dart';
 import 'package:OOSE/QueryBuilder/QueryBuilder.dart';
-import 'src/RuntimeModeReflection/RuntimeTypeReflection.dart';
 
 export 'src/DatabaseAdapters/MysqlAdapter.dart';
 
@@ -19,6 +16,7 @@ class ORM{
   String _db;
   String _user;
   String _password;
+  Map<Type, RuntimeClassReflection> _reflections  = new Map<Type, RuntimeClassReflection>();
 
   ORM(IDatabaseAdapter adapter,
       String host,
@@ -45,8 +43,29 @@ class ORM{
     _adapter.Disconnect();
   }
 
-  void Persist(dynamic model)async{
-    await new InsertAction(model, this).Call();
+  Future<T> PersistResult<T>(dynamic model) async{
+    int lastID = await Persist(model);
+    if(lastID >= 0){
+      return await Find<T>(lastID);
+    }
+    return null; // ID does not exist
+  }
+
+  ORMQueryBuilder StartQuery<T>(){
+    return new ORMQueryBuilder<T>(this);
+  }
+
+  Future<int> Persist(dynamic model) async{
+    //return await new InsertAction(model.runtimeType, this).Call(model);
+  }
+
+  Future<List<T>> FindCollection<T>(QueryBuilder baseBuilder){
+
+  }
+
+  Future<T> Find<T>(int id) async {
+    return (await new FindCollectionAction<T>(this).Call()).first;
+    //return await new FindAction<T>(this).Call().first;
   }
 
   void Delete(){
@@ -57,19 +76,28 @@ class ORM{
 
   }
 
-  Future<List<T>> Execute<T>(String query) async{
-    List<dynamic> dynamicResults = await ExecuteDynamic(query, T);
-    List<T> typeResults = new List<T>();
-    dynamicResults.forEach((result)=> typeResults.add(result as T));
-    return typeResults;
-  }
-
-  Future<List<dynamic>> ExecuteDynamic(String query, Type type) async{
-    return QueryResultUtils.ConvertResultTo(await _adapter.Execute(query), type);
-  }
-
   Future<QueryResult> ExecuteQueryResult(String query) async{
+    if(query.length <= 0){return null;} // Early exit when query is empty
     return await _adapter.Execute(query);
+  }
+
+  void EnsureRuntimeReflection(Type type){
+    if(!_reflections.containsKey(type)){
+      _reflections[type] = new RuntimeClassReflection(type, this);
+      _reflections[type].Initialize();
+    }
+  }
+
+  RuntimeClassReflection GetRuntimeReflectionTable(String table){
+    for (RuntimeClassReflection reflection in _reflections.values) {
+      if(reflection.TableAnnotation.Identifier == table){ return reflection; }
+    }
+    return null;
+  }
+
+  RuntimeClassReflection GetRuntimeReflection(Type type){
+    EnsureRuntimeReflection(type);
+    return _reflections[type];
   }
 
   // Getters
