@@ -2,29 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7255ee1b-2e50-46e5-a5c0-138a02f9614b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/bin/Models/Serializable.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/lib/JSON/JSON.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/lib/JSON/src/JSONEncoder.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/lib/JSON/src/Parsers/IParser.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/lib/JSON/src/Parsers/StringParser.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/lib/JSON/src/Parsers/BoolParser.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/lib/JSON/src/Parsers/ClassParser.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/lib/JSON/src/Parsers/DoubleParser.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/lib/JSON/src/Parsers/IntParser.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/lib/JSON/src/Parsers/ListParser.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/Controllers/TestRoute.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Controllers/TestRoute.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/app/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/bin/Controllers/TestRoute2.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Controllers/TestRoute2.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/Models/Ding.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Models/Ding.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/bin/Database/DB.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Database/DB.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/bin/Models/User.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Models/User.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/Router/IRouter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Router/IRouter.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/Router/OOSERouter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Router/OOSERouter.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/service.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/ORM/ORM.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/ORM/ORM.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/ORM/src/DatabaseActions/AAction.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/ORM/src/DatabaseActions/AAction.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/ORM/src/DatabaseActions/FindCollectionAction.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/ORM/src/DatabaseActions/GenericAction.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/ORM/src/DatabaseActions/GenericAction.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/ORM/src/DatabaseActions/InsertAction.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/ORM/src/DatabaseActions/InsertAction.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/ORM/src/Mapping/DatabaseMapper.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/ORM/src/QueryBuilder/ORMQueryBuilder.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/ORM/src/QueryBuilder/ORMQueryBuilder.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/ORM/src/Result/QueryResult.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/ORM/src/Result/QueryResult.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/Router/Router.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/Router/Router.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/Router/src/Types/IGetRequest.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/Router/src/Types/IGetRequest.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/JSON/JSON.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/JSON/JSON.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/JSON/src/JSONEncoder.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/JSON/src/JSONEncoder.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/JSON/src/Parsers/IParser.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/JSON/src/Parsers/IParser.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/JSON/src/Parsers/StringParser.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/JSON/src/Parsers/StringParser.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,47 +47,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GenericAction.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/lib/ORM/src/DatabaseActions/GenericAction.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JSON.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/lib/JSON/JSON.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="52" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
-              <folding>
-                <element signature="e#0#22#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JSONEncoder.dart" pinned="false" current-in-tab="true">
+      <file leaf-file-name="JSONEncoder.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/lib/JSON/src/JSONEncoder.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="167">
+              <caret line="40" column="25" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
               <folding>
-                <element signature="e#0#52#0" expanded="true" />
+                <element signature="e#0#55#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IParser.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/lib/JSON/src/Parsers/IParser.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -103,60 +62,91 @@
       <file leaf-file-name="StringParser.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/lib/JSON/src/Parsers/StringParser.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Ding.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/bin/Models/Ding.dart">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
-              <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+              <caret line="3" column="18" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="18" />
               <folding>
-                <element signature="e#0#35#0" expanded="true" />
+                <element signature="e#0#52#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pubspec.yaml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/pubspec.yaml">
+      <file leaf-file-name="IntParser.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/lib/JSON/src/Parsers/IntParser.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/bin/Models/User.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Router.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/lib/Router/Router.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="29" column="50" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
-              <folding>
-                <element signature="e#17#54#0" expanded="true" />
-              </folding>
+            <state>
+              <caret selection-end-line="24" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="service.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/bin/service.dart">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#30#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Server.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/bin/Server/Server.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="303">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DB.dart" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/bin/Database/DB.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="docker-compose.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docker-compose.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="10" lean-forward="true" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Dockerfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestRoute.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/bin/Controllers/TestRoute.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestRoute2.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/bin/Controllers/TestRoute2.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="54" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -193,7 +183,6 @@
       <find>QueryBuilder</find>
       <find>_ConvertQuery</find>
       <find>reflection</find>
-      <find>print</find>
       <find>_EnsureInstanceInObjects</find>
       <find>ParchedObject</find>
       <find>_FormatColumn</find>
@@ -201,6 +190,7 @@
       <find>pr</find>
       <find>_invokeControllerMethod</find>
       <find>GET</find>
+      <find>print</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -209,18 +199,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/lib/ORM/src/Annotations/Base/AnnotationDecorator.dart" />
-        <option value="$PROJECT_DIR$/app/lib/ORM/src/Annotations/Parsers/IParser.dart" />
-        <option value="$PROJECT_DIR$/app/lib/ORM/src/Annotations/Parsers/IAnnotationParser.dart" />
-        <option value="$PROJECT_DIR$/app/lib/ORM/src/Annotations/Column.dart" />
-        <option value="$PROJECT_DIR$/app/lib/ORM/src/DatabaseActions/FindAction.dart" />
-        <option value="$PROJECT_DIR$/app/lib/ORM/src/Utils/QueryResultUtils.dart" />
-        <option value="$PROJECT_DIR$/app/lib/ORM/src/RuntimeModeReflection/RuntimeTypeReflection.dart" />
-        <option value="$PROJECT_DIR$/app/lib/QueryBuilder/src/QuerySections/SelectSection.dart" />
-        <option value="$PROJECT_DIR$/app/lib/ORM/src/DatabaseActions/FindCollectionAction.dart" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/c8b934af-b446-4398-b51e-a3e7b5d858f2/console.sql" />
-        <option value="$PROJECT_DIR$/app/lib/ORM/src/Annotations/Parsers/VariableAnnotationParser.dart" />
-        <option value="$PROJECT_DIR$/app/lib/ORM/src/QueryBuilder/ORMSelectSection.dart" />
         <option value="$PROJECT_DIR$/app/lib/ORM/src/ResultAdapter/SqlJockyAdapter.dart" />
         <option value="$PROJECT_DIR$/app/lib/ORM/src/Result/ObjectParser.dart" />
         <option value="$PROJECT_DIR$/app/lib/ORM/src/Result/RowParser.dart" />
@@ -246,20 +224,32 @@
         <option value="$PROJECT_DIR$/app/lib/ORM/src/DatabaseActions/InsertAction.dart" />
         <option value="$PROJECT_DIR$/app/lib/ORM/ORM.dart" />
         <option value="$PROJECT_DIR$/app/lib/Router/src/Types/IGetRequest.dart" />
-        <option value="$PROJECT_DIR$/app/bin/Controllers/TestRoute2.dart" />
         <option value="$PROJECT_DIR$/app/bin/Router/OOSERouter.dart" />
         <option value="$PROJECT_DIR$/app/bin/Router/IRouter.dart" />
         <option value="$PROJECT_DIR$/app/bin/Controllers/TestRoute.dart" />
         <option value="$PROJECT_DIR$/app/bin/Models/Serializable.dart" />
-        <option value="$PROJECT_DIR$/app/bin/Models/User.dart" />
         <option value="$PROJECT_DIR$/app/bin/Models/Ding.dart" />
         <option value="$PROJECT_DIR$/app/pubspec.yaml" />
-        <option value="$PROJECT_DIR$/app/bin/service.dart" />
         <option value="$PROJECT_DIR$/app/lib/Router/Router.dart" />
+        <option value="$PROJECT_DIR$/app/lib/JSON/src/Parsers/BlobParser.dart" />
+        <option value="$PROJECT_DIR$/app/lib/JSON/src/Utils.dart" />
         <option value="$PROJECT_DIR$/app/lib/JSON/src/Parsers/IParser.dart" />
-        <option value="$PROJECT_DIR$/app/lib/JSON/src/Parsers/StringParser.dart" />
+        <option value="$PROJECT_DIR$/app/lib/JSON/src/Parsers/ClassParser.dart" />
         <option value="$PROJECT_DIR$/app/lib/JSON/JSON.dart" />
+        <option value="$PROJECT_DIR$/app/bin/Models/User.dart" />
+        <option value="$PROJECT_DIR$/app/lib/JSON/src/Parsers/IntParser.dart" />
+        <option value="$PROJECT_DIR$/app/lib/JSON/src/Parsers/StringParser.dart" />
+        <option value="$PROJECT_DIR$/app/lib/JSON/src/Parsers/ListParser.dart" />
+        <option value="$PROJECT_DIR$/app/lib/JSON/src/Parsers/DecimalParser.dart" />
         <option value="$PROJECT_DIR$/app/lib/JSON/src/JSONEncoder.dart" />
+        <option value="$PROJECT_DIR$/app/lib/JSON/src/Parsers/BoolParser.dart" />
+        <option value="$PROJECT_DIR$/app/lib/JSON/src/Parsers/DoubleParser.dart" />
+        <option value="$PROJECT_DIR$/app/bin/Controllers/TestRoute2.dart" />
+        <option value="$PROJECT_DIR$/app/bin/service.dart" />
+        <option value="$PROJECT_DIR$/app/Dockerfile" />
+        <option value="$PROJECT_DIR$/app/bin/Server/Server.dart" />
+        <option value="$PROJECT_DIR$/docker-compose.yml" />
+        <option value="$PROJECT_DIR$/app/bin/Database/DB.dart" />
       </list>
     </option>
   </component>
@@ -281,9 +271,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -306,67 +294,15 @@
               <item name="OOSE_Webservice" type="b2602c69:ProjectViewProjectNode" />
               <item name="OOSE_Webservice" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OOSE_Webservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OOSE_Webservice" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="JSON" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OOSE_Webservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OOSE_Webservice" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="JSON" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OOSE_Webservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OOSE_Webservice" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="JSON" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Parsers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OOSE_Webservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OOSE_Webservice" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="QueryBuilder" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OOSE_Webservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OOSE_Webservice" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="QueryBuilder" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OOSE_Webservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OOSE_Webservice" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="QueryBuilder" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OOSE_Webservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OOSE_Webservice" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="Router" type="462c0819:PsiDirectoryNode" />
+              <item name="bin" type="462c0819:PsiDirectoryNode" />
+              <item name="Database" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -490,11 +426,12 @@
       <workItem from="1546105613679" duration="165534000" />
       <workItem from="1546724867132" duration="38250000" />
       <workItem from="1546799085608" duration="2555000" />
+      <workItem from="1547215964556" duration="16011000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="240188000" />
+    <option name="totallyTimeSpent" value="256199000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -505,13 +442,13 @@
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info id="Image Layers" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="15" sideWeight="0.2109375" side_tool="true" visible="true" weight="0.34313726" />
+      <window_info anchor="bottom" id="Event Log" order="15" sideWeight="0.43333334" side_tool="true" visible="true" weight="0.42701524" />
       <window_info anchor="right" id="Maven Projects" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Dart Analysis" order="9" weight="0.29520696" />
       <window_info anchor="bottom" id="Version Control" order="13" />
-      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.7890625" visible="true" weight="0.34313726" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49947917" weight="0.32897604" />
+      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.78802085" weight="0.36492375" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.56666666" visible="true" weight="0.42701524" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="2" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2515625" />
@@ -546,76 +483,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/lib/ORM/src/Annotations/Table.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/ORM/src/QueryBuilder/ORMSelectSection.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/ORM/src/ResultAdapter/SqlJockyAdapter.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="43" lean-forward="true" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/ORM/src/Annotations/Primary.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/ORM/src/Annotations/Parsers/VariableAnnotationParser.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/ORM/src/Annotations/Parsers/ColumnAnnotationParser.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="151" selection-start-line="13" selection-start-column="117" selection-end-line="13" selection-end-column="151" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/ORM/src/Result/ParchedObject.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/ORM/src/Annotations/HasOne.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="100" lean-forward="true" selection-start-line="9" selection-start-column="100" selection-end-line="9" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/ORM/src/Result/QueryParser.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="36" column="21" lean-forward="true" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/ORM/src/Annotations/Column.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="43" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/lib/ORM/src/Annotations/Base/IdentifiableAnnotation.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -730,13 +597,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/bin/Server/Server.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="19" column="40" lean-forward="true" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://c8b934af-b446-4398-b51e-a3e7b5d858f2/schema/Test/table/Ding">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -793,23 +653,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/bin/Controllers/TestRoute2.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/bin/Controllers/TestRoute.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="17" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/bin/Models/Serializable.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -821,16 +664,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="702" column="6" selection-start-line="702" selection-start-column="6" selection-end-line="702" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/bin/Models/User.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -851,22 +684,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/ORM/src/DatabaseActions/GenericAction.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/bin/service.dart">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/lib/Router/Router.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
+        <state relative-caret-position="340">
           <caret line="29" column="50" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
           <folding>
             <element signature="e#17#54#0" expanded="true" />
@@ -874,37 +694,163 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/JSON/src/Parsers/IParser.dart">
+    <entry file="file://$PROJECT_DIR$/app/lib/JSON/src/Parsers/BlobParser.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="29" />
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/JSON/src/Utils.dart">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/ORM/src/DatabaseActions/GenericAction.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/lib/JSON/JSON.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="52" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
+        <state relative-caret-position="102">
+          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/JSON/src/Parsers/IParser.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/JSON/src/Parsers/ClassParser.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="21" column="53" lean-forward="true" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="53" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/JSON/src/Parsers/StringParser.dart">
+    <entry file="file://$PROJECT_DIR$/app/lib/JSON/src/Parsers/ListParser.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state relative-caret-position="323">
+          <caret line="21" column="53" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bin/Models/User.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/JSON/src/Parsers/IntParser.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="24" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/lib/JSON/src/JSONEncoder.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="167">
+          <caret line="40" column="25" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/JSON/src/Parsers/StringParser.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="18" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="18" />
           <folding>
             <element signature="e#0#52#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/JSON/src/Parsers/DoubleParser.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/JSON/src/Parsers/BoolParser.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="37" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bin/Controllers/TestRoute2.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="54" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bin/Controllers/TestRoute.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bin/service.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="10" lean-forward="true" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bin/Server/Server.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bin/Database/DB.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
         </state>
       </provider>
     </entry>

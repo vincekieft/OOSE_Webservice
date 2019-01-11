@@ -15,10 +15,4 @@ class User{
 
   @HasMany("user_id")
   List<Ding> dingen;
-
-  Map<String, dynamic> toJson() =>
-      {
-        'name': name,
-        'email': tel,
-      };
 }

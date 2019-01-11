@@ -1,10 +1,14 @@
 version: '3'
 services:
   webservice:
+    ports:
+      - 3000:3000
     build:
         context: ./app
-    ports:
-    - "3000:3000"
     volumes:
-    - ./app/bin:/app/bin
-    - ./app/lib:/app/lib
+      - ./app/bin:/app/bin
+      - ./app/lib:/app/lib
+networks:
+  default:
+    external:
+      name: OOSE_Network

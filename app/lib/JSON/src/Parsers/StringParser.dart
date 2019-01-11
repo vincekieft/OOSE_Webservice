@@ -1,15 +1,26 @@
 import 'package:OOSE/JSON/src/Parsers/IParser.dart';
+import 'package:sqljocky5/results/blob.dart';
 
 class StringParser implements IParser{
 
   @override
-  Type parseType() {
+  Type ParseType() {
     return String;
   }
 
   @override
-  String encode(dynamic value) {
-    return """${value.toString()}""";
+  String Encode(dynamic value) {
+    return "\"${value.toString()}\"";
+  }
+
+  @override
+  bool IsOfType(object) {
+    return object is String || object is Blob;
+  }
+
+  @override
+  int Priority() {
+    return 10;
   }
 
 }

@@ -8,4 +8,7 @@ ADD . /app
 RUN pub get --offline
 
 CMD []
+
+EXPOSE 3000
+
 ENTRYPOINT ["/usr/bin/dart", "./bin/service.dart"]

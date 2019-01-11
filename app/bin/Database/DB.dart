@@ -6,7 +6,7 @@ class DB{
   static void Initialize() async{
     _orm = new ORM(
         new MysqlAdapter(),
-        "127.0.0.1",
+        "OOSE-db",
         3306,
         "Test",
         "root",

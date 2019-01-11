@@ -8,7 +8,7 @@ class TestRoute2 implements IController, IGetRequest{
   }
 
   @override
-  Future<Object> GET(Map<String,dynamic> args) {
-    //return "HONDENNN,,   User: ${args["id"]} and kont: ${args['kont']}";
+  Future<Object> GET(Map<String,dynamic> args) async {
+    return "HONDENNN,,   User: ${args["id"]} and kont: ${args['kont']}";
   }
 }
