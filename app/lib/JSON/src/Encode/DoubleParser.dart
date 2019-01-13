@@ -1,4 +1,4 @@
-import 'package:OOSE/JSON/src/Parsers/StringParser.dart';
+import 'package:OOSE/JSON/src/Encode/StringParser.dart';
 
 class DoubleParser extends StringParser{
 

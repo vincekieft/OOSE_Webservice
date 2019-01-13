@@ -1,10 +1,10 @@
-import 'package:OOSE/JSON/src/Parsers/BoolParser.dart';
-import 'package:OOSE/JSON/src/Parsers/ClassParser.dart';
-import 'package:OOSE/JSON/src/Parsers/DoubleParser.dart';
-import 'package:OOSE/JSON/src/Parsers/IParser.dart';
-import 'package:OOSE/JSON/src/Parsers/IntParser.dart';
-import 'package:OOSE/JSON/src/Parsers/ListParser.dart';
-import 'package:OOSE/JSON/src/Parsers/StringParser.dart';
+import 'package:OOSE/JSON/src/Encode/BoolParser.dart';
+import 'package:OOSE/JSON/src/Encode/ClassParser.dart';
+import 'package:OOSE/JSON/src/Encode/DoubleParser.dart';
+import 'package:OOSE/JSON/src/Encode/IParser.dart';
+import 'package:OOSE/JSON/src/Encode/IntParser.dart';
+import 'package:OOSE/JSON/src/Encode/ListParser.dart';
+import 'package:OOSE/JSON/src/Encode/StringParser.dart';
 
 class JSONEncoder{
 

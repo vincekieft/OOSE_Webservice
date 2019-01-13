@@ -26,7 +26,6 @@ abstract class Router{
 
     if(comparator != null){
       Object result = await _invokeControllerMethod(comparator, method);
-      print(result.runtimeType);
       if(result != null) return new Response.ok(JSON.Encode(result));
     }
 

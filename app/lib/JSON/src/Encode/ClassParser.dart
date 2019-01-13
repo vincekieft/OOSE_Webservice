@@ -1,7 +1,7 @@
 import 'dart:mirrors';
 
 import 'package:OOSE/JSON/src/JSONEncoder.dart';
-import 'package:OOSE/JSON/src/Parsers/IParser.dart';
+import 'package:OOSE/JSON/src/Encode/IParser.dart';
 import 'package:OOSE/QueryBuilder/src/Utils/ArrayUtils.dart';
 
 class ClassParser implements IParser {
