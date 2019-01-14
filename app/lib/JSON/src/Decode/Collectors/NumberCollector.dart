@@ -1,5 +1,5 @@
 import 'package:OOSE/JSON/src/Decode/Collectors/ACollectorTemplate.dart';
-import 'package:OOSE/JSON/src/Decode/Keywords/KeywordEnums.dart';
+import 'package:OOSE/JSON/src/Decode/Parsers/ParserEnums.dart';
 
 class NumberCollector extends ACollectorTemplate {
   @override
@@ -22,7 +22,7 @@ class NumberCollector extends ACollectorTemplate {
   }
 
   @override
-  KeywordCategories TokenType() {
-    return KeywordCategories.Number;
+  ParserCategories TokenType() {
+    return ParserCategories.Constant;
   }
 }

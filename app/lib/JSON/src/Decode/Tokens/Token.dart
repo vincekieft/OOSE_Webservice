@@ -1,16 +1,16 @@
-import 'package:OOSE/JSON/src/Decode/Keywords/KeywordEnums.dart';
+import 'package:OOSE/JSON/src/Decode/Parsers/ParserEnums.dart';
 
 class Token{
-  KeywordCategories _type;
+  ParserCategories _type;
   String _value;
 
-  Token(KeywordCategories type, String value){
+  Token(ParserCategories type, String value){
     _type = type;
     _value = value;
   }
 
   // Getters
-  KeywordCategories get Type => _type;
+  ParserCategories get Type => _type;
   String get Value => _value;
   String get Identifier {
     return _type.toString() + _value;

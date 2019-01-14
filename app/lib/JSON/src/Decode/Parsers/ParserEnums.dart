@@ -1,7 +1,6 @@
-enum KeywordCategories{
+enum ParserCategories{
   MultiOperator,
-  Number,
-  String,
+  Constant,
   SingleOperator,
   Keyword
 }

@@ -4,7 +4,7 @@ import 'package:OOSE/JSON/src/Decode/Collectors/NumberCollector.dart';
 import 'package:OOSE/JSON/src/Decode/Collectors/MultiOperatorCollector.dart';
 import 'package:OOSE/JSON/src/Decode/Collectors/SingleOperatorCollector.dart';
 import 'package:OOSE/JSON/src/Decode/Collectors/StringCollector.dart';
-import 'package:OOSE/JSON/src/Decode/Token.dart';
+import 'package:OOSE/JSON/src/Decode/Tokens/Token.dart';
 
 class Tokenizer{
 

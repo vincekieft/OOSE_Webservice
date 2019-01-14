@@ -1,7 +1,7 @@
-import 'package:OOSE/JSON/src/Encode/IParser.dart';
+import 'package:OOSE/JSON/src/Encode/IEncoder.dart';
 import 'package:sqljocky5/results/blob.dart';
 
-class StringParser implements IParser{
+class StringEncoder implements IEncoder{
 
   @override
   Type ParseType() {

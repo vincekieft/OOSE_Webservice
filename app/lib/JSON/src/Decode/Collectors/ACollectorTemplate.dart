@@ -1,5 +1,5 @@
-import 'package:OOSE/JSON/src/Decode/Keywords/KeywordEnums.dart';
-import 'package:OOSE/JSON/src/Decode/Token.dart';
+import 'package:OOSE/JSON/src/Decode/Parsers/ParserEnums.dart';
+import 'package:OOSE/JSON/src/Decode/Tokens/Token.dart';
 
 abstract class ACollectorTemplate{
   // Private variables
@@ -7,7 +7,7 @@ abstract class ACollectorTemplate{
 
   // Abstract methods
   String SearchString();
-  KeywordCategories TokenType();
+  ParserCategories TokenType();
 
   // Public methods
   bool Feed(String character){
@@ -19,13 +19,18 @@ abstract class ACollectorTemplate{
   }
 
   Token ResetToken(){
-    String lastSeries = _characterSeries;
+    Token token = CreateToken();
     _characterSeries = "";
-    return new Token(TokenType(),lastSeries);
+    return token;
+  }
+
+  Token CreateToken(){
+    return new Token(TokenType(),_characterSeries);
   }
 
   // Getters
   String get LastCharacter => _characterSeries[_characterSeries.length -1];
   String get FirstCharacter => _characterSeries[0];
+  String get CharacterSeries => _characterSeries;
   int get Length => _characterSeries.length;
 }

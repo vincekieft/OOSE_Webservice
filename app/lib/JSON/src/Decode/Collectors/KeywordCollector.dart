@@ -1,5 +1,7 @@
 import 'package:OOSE/JSON/src/Decode/Collectors/ACollectorTemplate.dart';
-import 'package:OOSE/JSON/src/Decode/Keywords/KeywordEnums.dart';
+import 'package:OOSE/JSON/src/Decode/Parsers/ParserEnums.dart';
+import 'package:OOSE/JSON/src/Decode/Tokens/CategoryToken.dart';
+import 'package:OOSE/JSON/src/Decode/Tokens/Token.dart';
 
 class KeywordCollector extends ACollectorTemplate{
 
@@ -16,8 +18,12 @@ class KeywordCollector extends ACollectorTemplate{
   }
 
   @override
-  KeywordCategories TokenType() {
-    return KeywordCategories.Keyword;
+  ParserCategories TokenType() {
+    return ParserCategories.Keyword;
   }
 
+  @override
+  Token CreateToken(){
+    return new CategoryToken(TokenType(),CharacterSeries);
+  }
 }

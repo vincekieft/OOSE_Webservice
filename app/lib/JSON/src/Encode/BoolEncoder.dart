@@ -1,6 +1,6 @@
-import 'package:OOSE/JSON/src/Encode/StringParser.dart';
+import 'package:OOSE/JSON/src/Encode/StringEncoder.dart';
 
-class BoolParser extends StringParser{
+class BoolEncoder extends StringEncoder{
 
   @override
   Type ParseType() {

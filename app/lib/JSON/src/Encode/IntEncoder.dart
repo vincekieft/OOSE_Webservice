@@ -1,6 +1,6 @@
-import 'package:OOSE/JSON/src/Encode/IParser.dart';
+import 'package:OOSE/JSON/src/Encode/IEncoder.dart';
 
-class IntParser implements IParser{
+class IntEncoder implements IEncoder{
 
   @override
   Type ParseType() {

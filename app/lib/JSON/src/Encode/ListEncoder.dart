@@ -1,8 +1,8 @@
 import 'package:OOSE/JSON/src/JSONEncoder.dart';
-import 'package:OOSE/JSON/src/Encode/IParser.dart';
+import 'package:OOSE/JSON/src/Encode/IEncoder.dart';
 import 'package:OOSE/QueryBuilder/src/Utils/ArrayUtils.dart';
 
-class ListParser implements IParser{
+class ListEncoder implements IEncoder{
 
   @override
   Type ParseType() {

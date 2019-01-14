@@ -1,5 +1,5 @@
 import 'package:OOSE/JSON/src/Decode/Collectors/ACollectorTemplate.dart';
-import 'package:OOSE/JSON/src/Decode/Keywords/KeywordEnums.dart';
+import 'package:OOSE/JSON/src/Decode/Parsers/ParserEnums.dart';
 
 class SingleOperatorCollector extends ACollectorTemplate{
   @override
@@ -15,7 +15,7 @@ class SingleOperatorCollector extends ACollectorTemplate{
   }
 
   @override
-  KeywordCategories TokenType() {
-    return KeywordCategories.SingleOperator;
+  ParserCategories TokenType() {
+    return ParserCategories.SingleOperator;
   }
 }

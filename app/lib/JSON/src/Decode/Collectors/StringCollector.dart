@@ -1,5 +1,7 @@
 import 'package:OOSE/JSON/src/Decode/Collectors/ACollectorTemplate.dart';
-import 'package:OOSE/JSON/src/Decode/Keywords/KeywordEnums.dart';
+import 'package:OOSE/JSON/src/Decode/Parsers/ParserEnums.dart';
+import 'package:OOSE/JSON/src/Decode/Tokens/CategoryToken.dart';
+import 'package:OOSE/JSON/src/Decode/Tokens/Token.dart';
 
 class StringCollector extends ACollectorTemplate {
   @override
@@ -15,7 +17,12 @@ class StringCollector extends ACollectorTemplate {
   }
 
   @override
-  KeywordCategories TokenType() {
-    return KeywordCategories.String;
+  ParserCategories TokenType() {
+    return ParserCategories.Constant;
+  }
+
+  @override
+  Token CreateToken(){
+    return new CategoryToken(TokenType(),CharacterSeries);
   }
 }
