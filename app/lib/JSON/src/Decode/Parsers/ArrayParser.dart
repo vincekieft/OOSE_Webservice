@@ -1,10 +1,10 @@
 import 'package:OOSE/JSON/src/Decode/Nodes/ANode.dart';
 import 'package:OOSE/JSON/src/Decode/Nodes/ArrayNode.dart';
-import 'package:OOSE/JSON/src/Decode/Parsers/IParser.dart';
+import 'package:OOSE/JSON/src/Decode/Parsers/AParser.dart';
 import 'package:OOSE/JSON/src/Decode/Parsers/ParserEnums.dart';
 import 'package:OOSE/JSON/src/Decode/TokenIterator.dart';
 
-class ArrayParser implements IParser{
+class ArrayParser extends AParser{
 
   @override
   ParserCategories Category() {
@@ -21,8 +21,13 @@ class ArrayParser implements IParser{
     ArrayNode array = new ArrayNode();
 
     while(iterator.CurrentToken.Value != "]" && !iterator.Empty){
-      array.AddListItem(iterator.NextParser().ResolveToken(iterator));
+      AParser parser = iterator.NextParser(); // Step towards the next operator
+      if(parser != null){
+        array.AddListItem(parser.ResolveToken(iterator));
+      }
     }
+
+    iterator.NextParser(); // Step
 
     return array;
   }

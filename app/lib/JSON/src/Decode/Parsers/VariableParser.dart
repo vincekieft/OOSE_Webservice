@@ -1,10 +1,11 @@
 import 'package:OOSE/JSON/src/Decode/Nodes/ANode.dart';
+import 'package:OOSE/JSON/src/Decode/Nodes/ConstantNode.dart';
 import 'package:OOSE/JSON/src/Decode/Nodes/VariableNode.dart';
-import 'package:OOSE/JSON/src/Decode/Parsers/IParser.dart';
+import 'package:OOSE/JSON/src/Decode/Parsers/AParser.dart';
 import 'package:OOSE/JSON/src/Decode/Parsers/ParserEnums.dart';
 import 'package:OOSE/JSON/src/Decode/TokenIterator.dart';
 
-class VariableParser implements IParser{
+class VariableParser extends AParser{
 
   @override
   ParserCategories Category() {
@@ -19,8 +20,11 @@ class VariableParser implements IParser{
   @override
   ANode ResolveToken(TokenIterator iterator) {
     return new VariableNode(
-      iterator.GetRelativeParser(-1).ResolveToken(iterator),
-      iterator.GetRelativeParser(1).ResolveToken(iterator)
+      iterator.GetRelativeParser(-2).ResolveToken(iterator),
+      iterator.NextParser().ResolveToken(iterator)
     );
   }
+
+  // Private methods
+
 }

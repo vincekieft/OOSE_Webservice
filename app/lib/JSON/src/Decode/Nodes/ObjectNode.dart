@@ -6,7 +6,6 @@ class ObjectNode extends ANode{
   List<ANode> _variables = new List<ANode>();
 
   // Public methods
-
   void AddVariable(ANode variable){
     _variables.add(variable);
   }
@@ -15,5 +14,8 @@ class ObjectNode extends ANode{
   String Type() {
     return "Object";
   }
+
+  // Getters
+  List<ANode> get Variables => _variables;
 
 }
