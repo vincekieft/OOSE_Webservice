@@ -1,8 +1,6 @@
 import './Server/Server.dart';
 import 'Database/DB.dart';
 import 'Factories/RouterFactory.dart';
-import 'Models/Ding.dart';
-import 'Models/User.dart';
 import 'Router/IRouter.dart';
 
 main(List<String> args) async {

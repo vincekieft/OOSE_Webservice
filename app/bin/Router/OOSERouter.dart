@@ -1,15 +1,11 @@
 import 'dart:io';
-
-import 'package:shelf/shelf.dart';
+import '../Controllers/OpleidingController.dart';
 import 'IRouter.dart';
 import 'package:OOSE/Router/Router.dart';
-import '../Controllers/TestRoute.dart';
-import '../Controllers/TestRoute2.dart';
 
 class OOSERouter extends Router implements IRouter{
   OOSERouter() : super([
-    new TestRoute(),
-    new TestRoute2()
+    new OpleidingController()
   ]);
 
   @override
