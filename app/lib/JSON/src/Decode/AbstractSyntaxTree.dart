@@ -12,15 +12,16 @@ class AbstractSyntaxTree{
 
   // Private variables
   Tokenizer _lexer;
+  List<ANode> _rootNodes;
 
   AbstractSyntaxTree(String json){
     _lexer = new Tokenizer(json);
 
-    BuildSyntaxTree();
+    _rootNodes = BuildSyntaxTree();
   }
 
   // Public methods
-  void BuildSyntaxTree(){
+  List<ANode> BuildSyntaxTree(){
     List<Token> tokens = _lexer.BuildTokenList();
     TokenIterator iterator = new TokenIterator(tokens);
 
@@ -33,10 +34,7 @@ class AbstractSyntaxTree{
       }
     }
 
-    ObjectNode obj = rootNodes.first;
-    VariableNode vari = obj.Variables.first;
-    ConstantNode c = vari.Identifier;
-    print(c.Value);
+    return rootNodes;
   }
 
   // Private methods
@@ -47,4 +45,7 @@ class AbstractSyntaxTree{
 
     return null;
   }
+
+  // Getters
+  List<ANode> get RootNodes => _rootNodes;
 }

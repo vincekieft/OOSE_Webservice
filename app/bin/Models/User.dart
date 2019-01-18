@@ -1,3 +1,5 @@
+library user;
+
 import 'package:OOSE/ORM/ORM.dart';
 import 'Ding.dart';
 
