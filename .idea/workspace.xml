@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7255ee1b-2e50-46e5-a5c0-138a02f9614b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/Router/OOSERouter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Router/OOSERouter.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/bin/Models/Opleiding.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Models/Opleiding.dart" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,7 +33,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="OOSERouter.dart" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OOSERouter.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/bin/Router/OOSERouter.dart">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
@@ -67,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Opleiding.dart" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Opleiding.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/bin/Models/Opleiding.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="16" lean-forward="true" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+            <state relative-caret-position="170">
+              <caret line="10" column="2" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -187,8 +186,8 @@
         <option value="$PROJECT_DIR$/app/bin/service.dart" />
         <option value="$PROJECT_DIR$/app/bin/Router/IRouter.dart" />
         <option value="$PROJECT_DIR$/app/bin/Controllers/OpleidingController.dart" />
-        <option value="$PROJECT_DIR$/app/bin/Models/Opleiding.dart" />
         <option value="$PROJECT_DIR$/app/bin/Router/OOSERouter.dart" />
+        <option value="$PROJECT_DIR$/app/bin/Models/Opleiding.dart" />
       </list>
     </option>
   </component>
@@ -414,12 +413,12 @@
       <workItem from="1547765083564" duration="36817000" />
       <workItem from="1547839116443" duration="4985000" />
       <workItem from="1547846303684" duration="1380000" />
-      <workItem from="1547848046621" duration="596000" />
+      <workItem from="1547848046621" duration="709000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="361248000" />
+    <option name="totallyTimeSpent" value="361361000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -789,13 +788,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/bin/Models/Opleiding.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="16" lean-forward="true" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/lib/Router/Router.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -813,6 +805,13 @@
           <folding>
             <element signature="e#0#17#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bin/Models/Opleiding.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="2" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
         </state>
       </provider>
     </entry>

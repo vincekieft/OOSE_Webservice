@@ -8,7 +8,7 @@ class Opleiding{
 
   @Column("naam")
   String naam;
-   
-  @Column("jaargang")
-  DateTime jaargang;
+
+  @Column("startjaar")
+  DateTime startjaar;
 }
