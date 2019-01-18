@@ -26,7 +26,6 @@ abstract class Router{
     PathComparator comparator = _findPathMatch(request.uri.toString());
     HttpResponse response = request.response;
     _addCorsHeaders(response);
-    _addContentType(request);
 
     if(comparator != null){
       Object result = await _invokeControllerMethod(comparator, request.method);
@@ -52,15 +51,14 @@ abstract class Router{
   }
 
   /// Private methods ------------------------------------------------------------------------
-  void _addContentType(HttpRequest request){
-    request.headers.contentType = ContentType.json;
-  }
   void _addCorsHeaders(HttpResponse response) {
     response.headers.add('Access-Control-Allow-Origin', '*');
     response.headers
         .add('Access-Control-Allow-Methods', 'POST, OPTIONS');
+    /*
     response.headers.add('Access-Control-Allow-Headers',
-        'Origin, X-Requested-With, Content-Type, Accept');
+        'Origin, X-Requested-With, Content-Type, Accept, No-Cache');
+        */
   }
 
   PathComparator _findPathMatch(String path){

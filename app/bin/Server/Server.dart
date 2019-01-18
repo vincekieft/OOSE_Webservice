@@ -14,7 +14,7 @@ class Server{
 
   /// Public methods
   void Start() async {
-    HttpServer server = await HttpServer.bind('0.0.0.0', this._port);
+    HttpServer server = await HttpServer.bind(InternetAddress.loopbackIPv4, this._port);
 
     print('Serving at http://${server.address.host}:${server.port}');
 
