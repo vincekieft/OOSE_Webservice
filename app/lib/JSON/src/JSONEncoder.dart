@@ -12,12 +12,18 @@ class JSONEncoder{
     return jsonEncode(GenerateHashForObject(object));
   }
 
-  List<dynamic> GenerateHashForObject(dynamic object){
+  dynamic GenerateHashForObject(dynamic object){
+    if(object is List){
+      return GenerateHashForObjectList(object);
+    } else {
+      return GenerateHashForObjectSingle(object);
+    }
+  }
+
+  List<dynamic> GenerateHashForObjectList(dynamic object){
     // Initialize variables
     List<dynamic> results = new List();
-    List objects = [object];
-
-    if(object is List){ objects = object; }
+    List objects = object;
 
     for(dynamic item in objects){
       _AddObjectToHashList(item, results);

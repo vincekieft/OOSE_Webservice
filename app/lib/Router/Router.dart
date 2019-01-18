@@ -1,5 +1,7 @@
 library Router;
 
+import 'dart:convert';
+
 import 'package:OOSE/JSON/JSON.dart';
 import './src/IController.dart';
 import 'dart:mirrors';
@@ -28,6 +30,7 @@ abstract class Router{
 
     if(comparator != null){
       Object result = await _invokeControllerMethod(comparator, request.method);
+      String body = await request.transform(utf8.decoder).join();
       response.statusCode = HttpStatus.ok;
       response.write(JSON.Encode(result));
       return;

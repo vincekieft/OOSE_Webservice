@@ -10,7 +10,7 @@ class PathComparator{
   List<String> _splittedRequest;
   Map<String,dynamic> _arguments;
 
-  PathComparator(IController controller, String request){
+  PathComparator(IController controller, String request, [String body = ""]){
     this._controller = controller;
     this._requestPath = request.toLowerCase();
     _initializeSplittedPaths();

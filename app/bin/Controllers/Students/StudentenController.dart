@@ -1,5 +1,5 @@
 import 'package:OOSE/Router/Router.dart';
-import '../Repositories/StudentRepository.dart';
+import '../../Repositories/StudentRepository.dart';
 
 class StudentenController implements IController, IGetRequest{
 
