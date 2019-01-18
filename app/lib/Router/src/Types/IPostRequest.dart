@@ -1,3 +1,3 @@
-  abstract class IPostRequest{
-  Object POST(List<dynamic> args);
+abstract class IPostRequest{
+  Future<Object> POST(Map<String,dynamic> args);
 }

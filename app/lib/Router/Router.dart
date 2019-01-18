@@ -1,16 +1,15 @@
 library Router;
 
 import 'package:OOSE/JSON/JSON.dart';
-import 'package:shelf/shelf.dart';
 import './src/IController.dart';
 import 'dart:mirrors';
 import 'dart:io';
-import 'dart:convert';
 import 'src/PathComparator.dart';
 
 export './src/IController.dart';
 export './src/Types/IPostRequest.dart';
 export './src/Types/IGetRequest.dart';
+export './src/Types/IOptionsRequest.dart';
 
 abstract class Router{
   /// Private variables
@@ -54,7 +53,7 @@ abstract class Router{
   void _addCorsHeaders(HttpResponse response) {
     response.headers.add('Access-Control-Allow-Origin', '*');
     response.headers
-        .add('Access-Control-Allow-Methods', 'POST, OPTIONS');
+        .add('Access-Control-Allow-Methods', 'GET, PUT, DELETE, POST, OPTIONS');
     response.headers.add('Access-Control-Allow-Headers',
         'Origin, X-Requested-With, Content-Type, Accept, No-Cache');
   }
