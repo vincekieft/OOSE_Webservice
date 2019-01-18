@@ -1,3 +1,4 @@
+import 'package:OOSE/JSON/JSON.dart';
 import 'package:OOSE/ORM/ORM.dart';
 import 'User.dart';
 
@@ -10,6 +11,10 @@ class Ding{
   @Column("ding")
   String ding;
 
-  @HasOne("user_id")
+  @Column("user_id")
+  int user_id;
+
+  @JSONObject()
+  @HasOne("user_id", true)
   User user;
 }

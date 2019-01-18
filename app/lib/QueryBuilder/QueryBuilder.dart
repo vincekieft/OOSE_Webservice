@@ -2,8 +2,10 @@ library QueryBuilder;
 
 import 'dart:mirrors';
 import 'package:OOSE/QueryBuilder/src/IWritable.dart';
+import 'package:OOSE/QueryBuilder/src/QuerySections/DeleteSection.dart';
 import 'package:OOSE/QueryBuilder/src/QuerySections/InsertSection.dart';
 import 'package:OOSE/QueryBuilder/src/QuerySections/JoinSection.dart';
+import 'package:OOSE/QueryBuilder/src/QuerySections/UpdateSection.dart';
 import 'package:OOSE/QueryBuilder/src/QuerySections/WhereSection.dart';
 import 'package:OOSE/QueryBuilder/src/QuerySections/SelectSection.dart';
 import 'src/Utils/ArrayUtils.dart';
@@ -34,6 +36,14 @@ class QueryBuilder{
 
   InsertSection Insert(){
     return EnsureSection<InsertSection>();
+  }
+
+  UpdateSection Update(){
+    return EnsureSection<UpdateSection>();
+  }
+
+  DeleteSection Delete(){
+    return EnsureSection<DeleteSection>();
   }
 
   JoinSection LeftJoin(String table){
@@ -84,9 +94,8 @@ class QueryBuilder{
   }
 
   // Get / Set
-  String get RootTable{
-    return _table.first;
-  }
+  String get RootTable => _table.first;
+  List<String> get Tables => _table;
 
   // Write Query
   String Write([semicolon = true]){

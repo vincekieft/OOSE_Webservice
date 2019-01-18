@@ -19,6 +19,7 @@ class FieldAnnotationDecorator<T extends IdentifiableAnnotation> extends Annotat
   Type get VariableType => _mirror.type.reflectedType;
   VariableMirror get Variable => _mirror;
   String get VariableName => MirrorSystem.getName(_mirror.simpleName);
+  Symbol get VariableSymbol => new Symbol(VariableName);
   bool get IsPrimary => Identifiable is Primary;
   AnnotationDecorator<Table> get AnnotationTable => _table;
 }

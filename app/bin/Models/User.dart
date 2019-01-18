@@ -1,5 +1,4 @@
-library user;
-
+import 'package:OOSE/JSON/JSON.dart';
 import 'package:OOSE/ORM/ORM.dart';
 import 'Ding.dart';
 
@@ -15,6 +14,7 @@ class User{
   @Column("tel")
   int tel;
 
+  @JSONIgnore()
   @HasMany("user_id")
   List<Ding> dingen;
 }

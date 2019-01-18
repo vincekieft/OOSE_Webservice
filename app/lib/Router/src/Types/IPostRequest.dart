@@ -1,3 +1,3 @@
-abstract class IPostRequest{
+  abstract class IPostRequest{
   Object POST(List<dynamic> args);
 }

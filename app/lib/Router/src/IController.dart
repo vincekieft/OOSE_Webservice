@@ -1,3 +1,3 @@
-abstract class IController{
+  abstract class IController{
   String path();
 }

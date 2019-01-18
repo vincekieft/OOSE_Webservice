@@ -14,6 +14,7 @@ abstract class AAction<T>{
   // Public methods
   Future<QueryResult> CallResult() async{
     String query = await BuildQuery();
+    _PrintQuery(query);
     return await ExecuteQuery(query);
   }
 
@@ -32,6 +33,10 @@ abstract class AAction<T>{
     return await _orm.ExecuteQueryResult(query);
   }
 
+  // Private methods
+  void _PrintQuery(String query){
+    if(_orm.PrintQueries){print(query);}
+  }
 
   // Abstract methods
   Future<String> BuildQuery();

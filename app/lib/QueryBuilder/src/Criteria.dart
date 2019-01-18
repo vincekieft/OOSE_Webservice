@@ -24,7 +24,7 @@ class Criteria implements IWritable{
         return (s.contains(".")) ? s : "'${s}'";
         break;
       case Null:
-        return null;
+        return "NULL";
         break;
     }
 

@@ -1,20 +1,21 @@
+import 'dart:mirrors';
+
 import 'package:OOSE/ORM/src/Annotations/Association.dart';
 import 'package:OOSE/ORM/src/Annotations/Decorators/AssociationAnnotationDecorator.dart';
 import 'package:OOSE/ORM/src/Result/ParchedObject.dart';
 
 class HasMany extends Association {
-  const HasMany(String identifier) : super(identifier);
+  const HasMany(String identifier, [bool composition = false]) : super(identifier, composition);
 
   @override
   void ResolveAssociation(AssociationAnnotationDecorator<Association> association, ParchedObject object,  Map<String, Map<dynamic, ParchedObject>> searchMap) {
     String columnIdentifier = "${association.ReferenceTable.Identifier}#${association.Identifier}";
-    Symbol variableSymbol = new Symbol(association.VariableName);
 
     // Ensure list
-    List targetList = object.Mirror.getField(variableSymbol).reflectee;
+    List targetList = object.Mirror.getField(association.VariableSymbol).reflectee;
     if(targetList == null){ // Ensure list exists
       targetList = new List(); // Create new list
-      object.Mirror.setField(variableSymbol,targetList); // Link list to variable
+      object.Mirror.setField(association.VariableSymbol,targetList); // Link list to variable
     }
 
     // Find matches in reference table
@@ -32,4 +33,17 @@ class HasMany extends Association {
 
   @override
   bool get IsVirtualAttribute => true;
+
+  @override
+  void ForeachValue(AssociationAnnotationDecorator<Association> decorator, InstanceMirror mirror, Function callback) {
+    List valueList = mirror.getField(decorator.VariableSymbol).reflectee;
+
+    if(valueList != null){
+      valueList.forEach((value){
+        if(value != null){
+          callback(value);
+        }
+      });
+    }
+  }
 }

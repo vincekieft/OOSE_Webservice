@@ -1,14 +1,54 @@
-import 'package:OOSE/JSON/src/Decode/AbstractSyntaxTree.dart';
-import 'package:OOSE/JSON/src/Decode/Nodes/ANode.dart';
+import 'dart:convert';
+
+import 'dart:mirrors';
+
+import 'package:OOSE/JSON/src/Annotations/JSONAnnotation.dart';
 
 class JSONDecoder{
   // Public methods
   T Decode<T>(String json){
-    AbstractSyntaxTree tree = new AbstractSyntaxTree(json);
-
+    Map<String, dynamic> hash = jsonDecode(json);
+    return ResolveObject(hash, T);
   }
 
-  T ResolveObject<T>(ANode objectNode){
+  dynamic ResolveObject(Map<String, dynamic> hash, Type type){
+    ClassMirror mirror = reflectClass(type);
+    dynamic instance = _CreateInstanceOf(mirror);
+    InstanceMirror instanceMirror = reflect(instance);
 
+    mirror.declarations.values.forEach((DeclarationMirror declaration){
+      if(declaration is VariableMirror){
+        _SetField(instanceMirror, hash, declaration);
+      }
+    });
+
+    return instance;
+  }
+
+  // Private variables
+  void _SetField(InstanceMirror instance, Map<String, dynamic> valueHash, VariableMirror mirror){
+    String variableName = MirrorSystem.getName(mirror.simpleName);
+    JSONAnnotation annotation = _FindAnnotation(mirror);
+    dynamic value = valueHash[variableName];
+
+    if(annotation != null && value != null){
+      value = annotation.ToValue(value, mirror, this);
+    }
+
+    instance.setField(new Symbol(variableName), value);
+  }
+
+  dynamic _CreateInstanceOf<T>(ClassMirror mirror){
+    return mirror.newInstance(new Symbol(''), []).reflectee;
+  }
+
+  JSONAnnotation _FindAnnotation(VariableMirror mirror){
+    for (InstanceMirror meta in mirror.metadata) {
+      if(meta.reflectee is JSONAnnotation){
+        return meta.reflectee;
+      }
+    }
+
+    return null;
   }
 }

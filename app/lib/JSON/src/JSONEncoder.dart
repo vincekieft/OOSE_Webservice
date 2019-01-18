@@ -1,54 +1,57 @@
-import 'package:OOSE/JSON/src/Encode/BoolEncoder.dart';
-import 'package:OOSE/JSON/src/Encode/ClassEncoder.dart';
-import 'package:OOSE/JSON/src/Encode/DoubleEncoder.dart';
-import 'package:OOSE/JSON/src/Encode/IEncoder.dart';
-import 'package:OOSE/JSON/src/Encode/IntEncoder.dart';
-import 'package:OOSE/JSON/src/Encode/ListEncoder.dart';
-import 'package:OOSE/JSON/src/Encode/StringEncoder.dart';
+import 'dart:convert';
+
+import 'dart:mirrors';
+
+import 'package:OOSE/JSON/src/Annotations/JSONAnnotation.dart';
+import 'package:sqljocky5/sqljocky.dart';
 
 class JSONEncoder{
 
-  // Private variables
-  List<IEncoder> _parsers;
-  IEncoder _default;
-
-  JSONEncoder(){
-    _InitializeParsers();
-  }
-
   // Public methods
   String Encode(dynamic object){
-    return _FindParserFor(object).Encode(object);
+    return jsonEncode(GenerateHashForObject(object));
+  }
+
+  Map<String, dynamic> GenerateHashForObject(dynamic object){
+    // Initialize variables
+    Map<String, dynamic> hash = new Map();
+    ClassMirror mirror = reflectClass(object.runtimeType);
+    InstanceMirror instanceMirror = reflect(object);
+
+    // Loop through declarations
+    for (DeclarationMirror declaration in mirror.declarations.values) {
+      if(declaration is VariableMirror){
+        hash.addAll(_VariableToHash(declaration, instanceMirror));
+      }
+    }
+
+    return hash;
   }
 
   // Private methods
-  void _InitializeParsers(){
-    _parsers = new List<IEncoder>();
+  Map<String, dynamic> _VariableToHash(VariableMirror mirror, InstanceMirror instanceMirror){
+    Map<String, dynamic> variableHash = new Map();
 
-    // Add all parsers
-    _AddParser(new StringEncoder());
-    _AddParser(new IntEncoder());
-    _AddParser(new ListEncoder());
-    _AddParser(new ClassEncoder());
-    _AddParser(new DoubleEncoder());
-    _AddParser(new BoolEncoder());
+    JSONAnnotation annotation = _FindAnnotation(mirror);
 
-    // Sort parsers
-    _SortParsers();
+    var value = instanceMirror.getField(mirror.simpleName).reflectee;
+    if(annotation == null){ // Primitive types
+      if(value is Blob){ value = value.toString(); }
+      variableHash[MirrorSystem.getName(mirror.simpleName)] = value;
+    } else { // Annotations
+      Map<String, dynamic> hash = annotation.ToHash(value, mirror, this);
+      if(hash != null){
+        variableHash.addAll(hash);
+      }
+    }
+
+    return variableHash;
   }
 
-  void _AddParser(IEncoder parser){
-    _parsers.add(parser);
-  }
-
-  void _SortParsers(){
-    _parsers.sort((IEncoder a, IEncoder b) => b.Priority().compareTo(a.Priority()));
-  }
-
-  IEncoder _FindParserFor(dynamic object){
-    for (IEncoder parser in _parsers) {
-      if (parser.IsOfType(object)) {
-        return parser;
+  JSONAnnotation _FindAnnotation(VariableMirror mirror){
+    for (InstanceMirror meta in mirror.metadata) {
+      if(meta.reflectee is JSONAnnotation){
+        return meta.reflectee;
       }
     }
 

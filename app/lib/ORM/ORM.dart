@@ -1,5 +1,7 @@
 import 'package:OOSE/ORM/src/Annotations/Base/RuntimeClassReflection.dart';
+import 'package:OOSE/ORM/src/DatabaseActions/DeleteAction.dart';
 import 'package:OOSE/ORM/src/DatabaseActions/InsertAction.dart';
+import 'package:OOSE/ORM/src/DatabaseActions/UpdateAction.dart';
 import 'package:OOSE/ORM/src/DatabaseAdapters/IDatabaseAdapter.dart';
 import 'package:OOSE/ORM/src/QueryBuilder/ORMQueryBuilder.dart';
 import 'package:OOSE/ORM/src/Result/QueryResult.dart';
@@ -23,6 +25,7 @@ class ORM{
   String _db;
   String _user;
   String _password;
+  bool _printQueries;
   Map<Type, RuntimeClassReflection> _reflections  = new Map<Type, RuntimeClassReflection>();
 
   ORM(IDatabaseAdapter adapter,
@@ -30,7 +33,8 @@ class ORM{
       int port,
       String db,
       String user,
-      String password
+      String password,
+      [bool printQueries = false]
       ){
     _adapter = adapter;
     _host = host;
@@ -38,6 +42,7 @@ class ORM{
     _db = db;
     _user = user;
     _password = password;
+    _printQueries = printQueries;
   }
 
   // Public methods
@@ -58,12 +63,12 @@ class ORM{
     return await new InsertAction<T>(model, this).CallSingle();
   }
 
-  void Delete(){
-
+  void Delete(dynamic model){
+    new DeleteAction(model, this).CallResult();
   }
 
-  void Update(){
-
+  void Update(dynamic model){
+    new UpdateAction(model, this).CallResult();
   }
 
   Future<QueryResult> ExecuteQueryResult(String query) async{
@@ -95,4 +100,5 @@ class ORM{
   int get Port => _port;
   String get Database => _db;
   String get User => _user;
+  bool get PrintQueries => _printQueries;
 }

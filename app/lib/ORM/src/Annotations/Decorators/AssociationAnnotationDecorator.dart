@@ -14,6 +14,13 @@ class AssociationAnnotationDecorator<T extends Association> extends FieldAnnotat
     _referenceTable = referenceTable;
   }
 
+  // Public methods
+  void ForeachValue(InstanceMirror instance, Function callback){
+    Identifiable.ForeachValue(this, instance, callback);
+  }
+
   // Getters
   AnnotationDecorator<Table> get ReferenceTable => _referenceTable;
+  bool get IsComposition => Identifiable.IsComposition;
+  bool get IsAggregation => Identifiable.IsAggregation;
 }

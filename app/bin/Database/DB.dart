@@ -10,7 +10,8 @@ class DB{
         3306,
         "Test",
         "root",
-        "123456"
+        "123456",
+        true
     );
 
     await _orm.Connect();
