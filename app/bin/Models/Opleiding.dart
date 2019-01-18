@@ -10,5 +10,5 @@ class Opleiding{
   String naam;
 
   @Column("startjaar")
-  DateTime startjaar;
+  int startjaar;
 }

@@ -24,6 +24,7 @@ class RowParser{
     Map<String, ParchedObject> objects = new Map<String, ParchedObject>();
 
     int index = 0; // To keep track of current reflection
+
     _row.values.forEach((String name, dynamic value) {
       if(value != null) { // Only go through column if column exists
         RuntimeClassReflection reflection = _parser.ColumnReflections[index];

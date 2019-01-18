@@ -66,13 +66,17 @@ class QueryParser<T>{
   }
   List<T> FormatResult(Map<String, Map<dynamic, ParchedObject>> objects){
     RuntimeClassReflection targetReflection = _orm.GetRuntimeReflection(T);
-    Map<dynamic, ParchedObject> resultMap = objects[targetReflection.TableAnnotation.Identifier];
+    Map<dynamic, ParchedObject> resultMap = objects[targetReflection
+        .TableAnnotation.Identifier];
 
     // Actual formatting
     List<T> result = new List<T>();
-    resultMap.values.forEach((ParchedObject object){
-      result.add(object.Object as T);
-    });
+
+    if(resultMap != null) {
+      resultMap.values.forEach((ParchedObject object) {
+        result.add(object.Object as T);
+      });
+    }
 
     return result;
   }

@@ -14,7 +14,7 @@ class JSONList extends JSONAnnotation{
     List<Map<String, dynamic>> result = new List();
 
     input.forEach((dynamic item){
-      result.add(encoder.GenerateHashForObject(item));
+      result.add(encoder.GenerateHashForObjectSingle(item));
     });
 
     return {MirrorSystem.getName(mirror.simpleName) : result};

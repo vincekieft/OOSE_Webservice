@@ -4,6 +4,7 @@ import 'package:OOSE/JSON/src/JSONEncoder.dart';
 export 'src/Annotations/JSONIgnore.dart';
 export 'src/Annotations/JSONList.dart';
 export 'src/Annotations/JSONObject.dart';
+export 'src/Annotations/JSONDate.dart';
 
 class JSON{
   // Static methods

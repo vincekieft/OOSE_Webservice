@@ -12,8 +12,30 @@ class JSONEncoder{
     return jsonEncode(GenerateHashForObject(object));
   }
 
-  Map<String, dynamic> GenerateHashForObject(dynamic object){
+  List<dynamic> GenerateHashForObject(dynamic object){
     // Initialize variables
+    List<dynamic> results = new List();
+    List objects = [object];
+
+    if(object is List){ objects = object; }
+
+    for(dynamic item in objects){
+      _AddObjectToHashList(item, results);
+    }
+
+    return results;
+  }
+
+  Map<String, dynamic> GenerateHashForObjectSingle(dynamic object){
+    return _GenerateHashForObject(object);
+  }
+
+  // Private methods
+  void _AddObjectToHashList(dynamic object, List<dynamic> results){
+    results.add(_GenerateHashForObject(object));
+  }
+
+  Map<String, dynamic> _GenerateHashForObject(dynamic object){
     Map<String, dynamic> hash = new Map();
     ClassMirror mirror = reflectClass(object.runtimeType);
     InstanceMirror instanceMirror = reflect(object);
@@ -28,7 +50,6 @@ class JSONEncoder{
     return hash;
   }
 
-  // Private methods
   Map<String, dynamic> _VariableToHash(VariableMirror mirror, InstanceMirror instanceMirror){
     Map<String, dynamic> variableHash = new Map();
 

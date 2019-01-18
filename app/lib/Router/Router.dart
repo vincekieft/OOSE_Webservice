@@ -28,12 +28,9 @@ abstract class Router{
 
     if(comparator != null){
       Object result = await _invokeControllerMethod(comparator, request.method);
-
-      if(result != null) {
-        response.statusCode = HttpStatus.ok;
-        response.write(JSON.Encode(result));
-        return;
-      }
+      response.statusCode = HttpStatus.ok;
+      response.write(JSON.Encode(result));
+      return;
     }
 
     response.statusCode = HttpStatus.notFound;
