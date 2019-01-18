@@ -54,8 +54,8 @@
       <file leaf-file-name="Router.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/lib/Router/Router.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="56" column="62" selection-start-line="56" selection-start-column="62" selection-end-line="56" selection-end-column="62" />
+            <state relative-caret-position="391">
+              <caret line="55" column="20" lean-forward="true" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
               <folding>
                 <element signature="e#17#54#0" expanded="true" />
               </folding>
@@ -385,12 +385,12 @@
       <workItem from="1547215964556" duration="37195000" />
       <workItem from="1547332490418" duration="40087000" />
       <workItem from="1547765083564" duration="36817000" />
-      <workItem from="1547839116443" duration="3854000" />
+      <workItem from="1547839116443" duration="3909000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="358141000" />
+    <option name="totallyTimeSpent" value="358196000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -807,8 +807,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/lib/Router/Router.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="56" column="62" selection-start-line="56" selection-start-column="62" selection-end-line="56" selection-end-column="62" />
+        <state relative-caret-position="391">
+          <caret line="55" column="20" lean-forward="true" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
           <folding>
             <element signature="e#17#54#0" expanded="true" />
           </folding>
