@@ -5,7 +5,7 @@ class StudentenController implements IController, IGetRequest{
 
   @override
   String path() {
-    return "Student/all";
+    return "Students";
   }
 
   @override

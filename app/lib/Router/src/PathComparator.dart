@@ -12,7 +12,7 @@ class PathComparator{
 
   PathComparator(IController controller, String request){
     this._controller = controller;
-    this._requestPath = request;
+    this._requestPath = request.toLowerCase();
     _initializeSplittedPaths();
   }
 
@@ -35,7 +35,7 @@ class PathComparator{
     // Initialize arrays
     List<String> argumentSplit = _requestPath.split("?");
     _splittedRequest = _clearOutEmpty(argumentSplit.first.split("/"));
-    _splittedController = _clearOutEmpty(_controller.path().split("/"));
+    _splittedController = _clearOutEmpty(_controller.path().toLowerCase().split("/"));
     _arguments = new Map<String,dynamic>();
 
     if(argumentSplit.length > 0) _addStringArguments(argumentSplit.last);
