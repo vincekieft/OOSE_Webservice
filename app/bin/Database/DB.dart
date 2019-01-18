@@ -8,7 +8,7 @@ class DB{
         new MysqlAdapter(),
         "OOSE-db",
         3306,
-        "Test",
+        "OOSE",
         "root",
         "123456",
         true
