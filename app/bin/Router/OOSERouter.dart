@@ -9,7 +9,7 @@ class OOSERouter extends Router implements IRouter{
   ]);
 
   @override
-  void OnRequest(HttpRequest request){
-    Route(request);
+  void OnRequest(HttpRequest request) async{
+    await Route(request);
   }
 }
