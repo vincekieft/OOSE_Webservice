@@ -53,10 +53,6 @@ abstract class Router{
   /// Private methods ------------------------------------------------------------------------
   void _addCorsHeaders(HttpResponse response) {
     response.headers.add('Access-Control-Allow-Origin', '*');
-    response.headers
-        .add('Access-Control-Allow-Methods', 'POST, OPTIONS');
-    response.headers.add('Access-Control-Allow-Headers',
-        'Origin, X-Requested-With, Content-Type, Accept, No-Cache');
   }
 
   PathComparator _findPathMatch(String path){
