@@ -4,6 +4,7 @@ import 'package:OOSE/JSON/JSON.dart';
 import 'package:shelf/shelf.dart';
 import './src/IController.dart';
 import 'dart:mirrors';
+import 'dart:io';
 import 'dart:convert';
 import 'src/PathComparator.dart';
 
@@ -21,15 +22,22 @@ abstract class Router{
   }
 
   /// Route to a given path and call controller
-  Future<Response> Route(String path, String method) async{
-    PathComparator comparator = _findPathMatch(path);
+  void Route(HttpRequest request) async{
+    PathComparator comparator = _findPathMatch(request.uri.toString());
+    HttpResponse response = request.response;
+    _addCorsHeaders(response);
 
     if(comparator != null){
-      Object result = await _invokeControllerMethod(comparator, method);
-      if(result != null) return new Response.ok(JSON.Encode(result));
+      Object result = await _invokeControllerMethod(comparator, request.method);
+
+      if(result != null) {
+        response.statusCode = HttpStatus.ok;
+        response.write(JSON.Encode(result));
+        return;
+      }
     }
 
-    return _notFoundResponse();
+    response.statusCode = HttpStatus.notFound;
   }
 
   /// Adds [controller] to router controllers
@@ -44,6 +52,14 @@ abstract class Router{
 
   /// Private methods ------------------------------------------------------------------------
 
+  void _addCorsHeaders(HttpResponse response) {
+    response.headers.add('Access-Control-Allow-Origin', '*');
+    response.headers
+        .add('Access-Control-Allow-Methods', 'POST, OPTIONS');
+    response.headers.add('Access-Control-Allow-Headers',
+        'Origin, X-Requested-With, Content-Type, Accept');
+  }
+
   PathComparator _findPathMatch(String path){
     for(IController controller in _controllers){
       PathComparator comparator = new PathComparator(controller, path);
@@ -51,10 +67,6 @@ abstract class Router{
     }
 
     return null;
-  }
-
-  Response _notFoundResponse(){
-    return new Response.notFound("");
   }
 
   Future<Object> _invokeControllerMethod(PathComparator comparator, String method) async{

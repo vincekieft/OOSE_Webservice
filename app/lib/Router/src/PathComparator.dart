@@ -34,12 +34,22 @@ class PathComparator{
   void _initializeSplittedPaths(){
     // Initialize arrays
     List<String> argumentSplit = _requestPath.split("?");
-    _splittedRequest = argumentSplit.first.split("/");
-    _splittedController = _controller.path().split("/");
+    _splittedRequest = _clearOutEmpty(argumentSplit.first.split("/"));
+    _splittedController = _clearOutEmpty(_controller.path().split("/"));
     _arguments = new Map<String,dynamic>();
 
     if(argumentSplit.length > 0) _addStringArguments(argumentSplit.last);
     _matchSplittedPaths();
+  }
+
+  List<String> _clearOutEmpty(List<String> input){
+    for (int i = 0; i < input.length; i++) {
+      if(input[i] == ""){
+        input.removeAt(i);
+        i--;
+      }
+    }
+    return input;
   }
 
   void _matchSplittedPaths(){

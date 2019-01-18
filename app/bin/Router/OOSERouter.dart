@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:shelf/shelf.dart';
 import 'IRouter.dart';
 import 'package:OOSE/Router/Router.dart';
@@ -11,7 +13,7 @@ class OOSERouter extends Router implements IRouter{
   ]);
 
   @override
-  Future<Response> OnRequest(Request request) async{
-    return await Route(request.url.toString(),request.method);
+  void OnRequest(HttpRequest request){
+    Route(request);
   }
 }
