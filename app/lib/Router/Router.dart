@@ -29,8 +29,8 @@ abstract class Router{
     _addCorsHeaders(response);
 
     if(comparator != null){
+      comparator.AddArgument("body", await request.transform(utf8.decoder).join());
       Object result = await _invokeControllerMethod(comparator, request.method);
-      String body = await request.transform(utf8.decoder).join();
       response.statusCode = HttpStatus.ok;
       response.write(JSON.Encode(result));
       return;

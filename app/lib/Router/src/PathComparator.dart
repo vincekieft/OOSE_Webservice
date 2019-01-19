@@ -23,6 +23,10 @@ class PathComparator{
     return _listEquality(_splittedController,_splittedRequest);
   }
 
+  void AddArgument(String key, dynamic value){
+    _arguments[key] = value;
+  }
+
   /// Getters
 
   bool get EqualLength => _splittedController.length == _splittedRequest.length;
