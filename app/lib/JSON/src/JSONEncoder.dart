@@ -15,9 +15,21 @@ class JSONEncoder{
   dynamic GenerateHashForObject(dynamic object){
     if(object is List){
       return GenerateHashForObjectList(object);
+    } if (object is Map){
+      return GenerateHashForObjectMap(object);
     } else {
       return GenerateHashForObjectSingle(object);
     }
+  }
+
+  Map<String, dynamic> GenerateHashForObjectMap(dynamic object){
+    Map<String, dynamic> map = object;
+
+    map.forEach((String key, dynamic value){
+      map[key] = GenerateHashForObject(value);
+    });
+
+    return map;
   }
 
   List<dynamic> GenerateHashForObjectList(dynamic object){
