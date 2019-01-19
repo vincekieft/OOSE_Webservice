@@ -12,6 +12,10 @@ class WhereSection extends SelectionSection<WhereSection> implements IWritable{
     return AddCriteria(column, "IN", value, table);
   }
 
+  WhereSection NotIn(String column, dynamic value, [String table = null]){
+    return AddCriteria(column, "NOT IN", value, table);
+  }
+
   // Render method
   @override
   String toString() {

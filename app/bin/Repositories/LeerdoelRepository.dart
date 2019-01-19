@@ -13,6 +13,26 @@ class LeerdoelRepository{
     return await builder.Execute();
   }
 
+  Future<List<Leerdoel>> GetAllUnusedLeerdoelen(int moduleId) async{
+    ORMQueryBuilder<Leerdoel> builder = DB.orm.StartQuery<Leerdoel>();
+    builder.LeftJoin(Module).EqualColumn("module_id", "id");
+
+    // Select all module lessen subquery
+    QueryBuilder lessenSub = new QueryBuilder("Les");
+    lessenSub.Select().SetColumn("id");
+    lessenSub.Where().Equal("module_id", moduleId);
+
+    // Select leerdoelen covered by module lessen
+    QueryBuilder lesleerdoelenSub = new QueryBuilder("LesLeerdoel");
+    lesleerdoelenSub.Select().SetColumn("leerdoel_id");
+    lesleerdoelenSub.Where().In("les_id", lessenSub.WriteAsSubquery());
+
+    // Select all unused leerdoelen
+    builder.Where().NotIn("id", lesleerdoelenSub.WriteAsSubquery());
+
+    return await builder.Execute();
+  }
+
   Future<List<Leerdoel>> GetAllLesLeerdoelen(int lesId) async{
     ORMQueryBuilder<Leerdoel> builder = DB.orm.StartQuery<Leerdoel>();
     builder.LeftJoin(Module).EqualColumn("module_id", "id");
