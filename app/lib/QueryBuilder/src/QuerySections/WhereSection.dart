@@ -7,6 +7,11 @@ class WhereSection extends SelectionSection<WhereSection> implements IWritable{
 
   WhereSection(QueryBuilder builder) : super(builder);
 
+  // Public method
+  WhereSection In(String column, dynamic value, [String table = null]){
+    return AddCriteria(column, "IN", value, table);
+  }
+
   // Render method
   @override
   String toString() {
