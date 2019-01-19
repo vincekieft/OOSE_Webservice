@@ -33,9 +33,11 @@ abstract class Router{
       Object result = await _invokeControllerMethod(comparator, request.method);
       response.statusCode = HttpStatus.ok;
       response.write(JSON.Encode(result));
+      _PrintRequest(request, comparator);
       return;
     }
 
+    _PrintRequest(request, comparator);
     response.statusCode = HttpStatus.notFound;
   }
 
@@ -56,6 +58,17 @@ abstract class Router{
         .add('Access-Control-Allow-Methods', 'GET, PUT, DELETE, POST, OPTIONS');
     response.headers.add('Access-Control-Allow-Headers',
         'Origin, X-Requested-With, Content-Type, Accept, No-Cache');
+  }
+
+  void _PrintRequest(HttpRequest request,PathComparator comparator){
+    print("--------------------------------------------------------------------------------");
+    print("${request.method} Request: ${request.uri.toString()}. Contents:");
+    if(comparator != null) {
+      comparator.Arguments.forEach((String key, dynamic value) {
+        print("Argument: ${key} : ${value.toString()}");
+      });
+    }
+    print("---------------------------------------------------------------------------------");
   }
 
   PathComparator _findPathMatch(String path){

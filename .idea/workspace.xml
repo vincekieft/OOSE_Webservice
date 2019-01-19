@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7255ee1b-2e50-46e5-a5c0-138a02f9614b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/JSON/src/JSONDecoder.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/JSON/src/JSONDecoder.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/bin/Server/Server.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Server/Server.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/Router/Router.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/Router/Router.dart" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,10 +56,22 @@
       <file leaf-file-name="OOSERouter.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/bin/Router/OOSERouter.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
+            <state relative-caret-position="206">
               <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Router.dart" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/lib/Router/Router.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="71" column="3" lean-forward="true" selection-start-line="71" selection-start-column="3" selection-end-line="71" selection-end-column="3" />
+              <folding>
+                <element signature="e#17#39#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -76,6 +89,24 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="service.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/bin/service.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Server.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/bin/Server/Server.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ModulesController.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/bin/Controllers/Modules/ModulesController.dart">
           <provider selected="true" editor-type-id="text-editor">
@@ -83,30 +114,6 @@
               <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OpleidingController.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/bin/Controllers/Opleidingen/OpleidingController.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" selection-start-line="15" selection-end-line="17" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ModuleSpecificController.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/bin/Controllers/Modules/ModuleSpecificController.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" selection-start-line="15" selection-end-line="18" selection-end-column="41" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -133,18 +140,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OpleidingenController.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/bin/Controllers/Opleidingen/OpleidingenController.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="22" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="CreateModuleModel.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/bin/RequestModels/CreateModuleModel.dart">
           <provider selected="true" editor-type-id="text-editor">
@@ -157,10 +152,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JSONDecoder.dart" pinned="false" current-in-tab="true">
+      <file leaf-file-name="JSONDecoder.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/lib/JSON/src/JSONDecoder.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
+            <state relative-caret-position="308">
               <caret line="55" column="3" lean-forward="true" selection-start-line="55" selection-start-column="3" selection-end-line="55" selection-end-column="3" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
@@ -197,7 +192,6 @@
       <find>objects</find>
       <find>FormatResult</find>
       <find>ParseQuery</find>
-      <find>print</find>
       <find>GenerateHashForObject</find>
       <find>ResolveAssociation</find>
       <find>others</find>
@@ -211,6 +205,7 @@
       <find>Call</find>
       <find>jsonC</find>
       <find>_SetField</find>
+      <find>print</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -221,7 +216,6 @@
       <list>
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/c8b934af-b446-4398-b51e-a3e7b5d858f2/console.sql" />
         <option value="$PROJECT_DIR$/app/bin/Database/DB.dart" />
-        <option value="$PROJECT_DIR$/app/bin/Server/Server.dart" />
         <option value="$PROJECT_DIR$/app/lib/Router/src/Types/IPostRequest.dart" />
         <option value="$PROJECT_DIR$/app/lib/Router/src/Types/IOptionsRequest.dart" />
         <option value="$PROJECT_DIR$/app/bin/Controllers/TestRoute.dart" />
@@ -245,7 +239,6 @@
         <option value="$PROJECT_DIR$/app/bin/Controllers/StudentenController.dart" />
         <option value="$PROJECT_DIR$/app/lib/Router/src/PathComparator.dart" />
         <option value="$PROJECT_DIR$/app/bin/Controllers/Students/StudentenController.dart" />
-        <option value="$PROJECT_DIR$/app/lib/Router/Router.dart" />
         <option value="$PROJECT_DIR$/app/bin/Controllers/Students/StudentController.dart" />
         <option value="$PROJECT_DIR$/app/bin/RequestModels/CreateStudentModel.dart" />
         <option value="$PROJECT_DIR$/app/lib/ORM/src/DatabaseActions/AAction.dart" />
@@ -270,6 +263,8 @@
         <option value="$PROJECT_DIR$/app/bin/Controllers/Opleidingen/OpleidingSpecificController.dart" />
         <option value="$PROJECT_DIR$/app/bin/RequestModels/CreateModuleModel.dart" />
         <option value="$PROJECT_DIR$/app/lib/JSON/src/JSONDecoder.dart" />
+        <option value="$PROJECT_DIR$/app/bin/Server/Server.dart" />
+        <option value="$PROJECT_DIR$/app/lib/Router/Router.dart" />
       </list>
     </option>
   </component>
@@ -353,6 +348,13 @@
               <item name="OOSE_Webservice" type="b2602c69:ProjectViewProjectNode" />
               <item name="OOSE_Webservice" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="bin" type="462c0819:PsiDirectoryNode" />
+              <item name="Server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OOSE_Webservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OOSE_Webservice" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -378,6 +380,30 @@
               <item name="JSON" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Annotations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OOSE_Webservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OOSE_Webservice" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="Router" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OOSE_Webservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OOSE_Webservice" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="Router" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OOSE_Webservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OOSE_Webservice" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="Router" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Types" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -514,19 +540,19 @@
       <workItem from="1547765083564" duration="36817000" />
       <workItem from="1547839116443" duration="4985000" />
       <workItem from="1547846303684" duration="1380000" />
-      <workItem from="1547848046621" duration="19254000" />
+      <workItem from="1547848046621" duration="20149000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="379906000" />
+    <option name="totallyTimeSpent" value="380801000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="15" sideWeight="0.44427082" side_tool="true" visible="true" weight="0.37254903" />
+      <window_info anchor="bottom" id="Event Log" order="15" sideWeight="0.44427082" side_tool="true" visible="true" weight="0.55991286" />
       <window_info anchor="right" id="Maven Projects" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Dart Analysis" order="9" weight="0.29520696" />
@@ -544,7 +570,7 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Run" order="4" sideWeight="0.7859375" weight="0.18627451" />
       <window_info anchor="bottom" id="Version Control" order="13" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.55572915" visible="true" weight="0.37254903" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.55572915" visible="true" weight="0.55991286" />
       <window_info anchor="bottom" id="Database Console" order="0" sideWeight="0.59270835" weight="0.27559912" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2515625" />
       <window_info anchor="bottom" id="Find" order="3" sideWeight="0.49427083" weight="0.2603486" />
@@ -627,23 +653,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/bin/Server/Server.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/Router/Router.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41">
-          <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-          <folding>
-            <element signature="e#17#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -746,13 +755,6 @@
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/bin/service.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -908,16 +910,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/bin/Router/OOSERouter.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/bin/Controllers/Opleidingen/OpleidingenController.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -997,10 +989,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/lib/JSON/src/JSONDecoder.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
+        <state relative-caret-position="308">
           <caret line="55" column="3" lean-forward="true" selection-start-line="55" selection-start-column="3" selection-end-line="55" selection-end-column="3" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bin/service.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bin/Server/Server.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bin/Router/OOSERouter.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/Router/Router.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="71" column="3" lean-forward="true" selection-start-line="71" selection-start-column="3" selection-end-line="71" selection-end-column="3" />
+          <folding>
+            <element signature="e#17#39#0" expanded="true" />
           </folding>
         </state>
       </provider>

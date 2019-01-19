@@ -19,8 +19,6 @@ class Server{
     print('Serving at http://${server.address.host}:${server.port}');
 
     await for (HttpRequest req in server) {
-      print("${req.method} Request: ${req.uri.toString()}");
-
       await _onRequest(req);
       req.response.close();
     }
