@@ -8,6 +8,9 @@ class Les{
   @Primary("id")
   int id;
 
+  @Column("naam")
+  String naam;
+
   @JSONDate()
   @Column("datum")
   DateTime datum;
