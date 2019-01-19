@@ -1,6 +1,9 @@
 import 'dart:io';
 import '../Controllers/Docenten/DocentController.dart';
 import '../Controllers/Docenten/DocentenController.dart';
+import '../Controllers/Modules/ModuleController.dart';
+import '../Controllers/Modules/ModuleSpecificController.dart';
+import '../Controllers/Modules/ModulesController.dart';
 import '../Controllers/Opleidingen/OpleidingController.dart';
 import '../Controllers/Opleidingen/OpleidingSpecificController.dart';
 import '../Controllers/Opleidingen/OpleidingenController.dart';
@@ -17,7 +20,10 @@ class OOSERouter extends Router implements IRouter{
     new DocentenController(),
     new DocentController(),
     new OpleidingenController(),
-    new OpleidingSpecificController()
+    new OpleidingSpecificController(),
+    new ModulesController(),
+    new ModuleSpecificController(),
+    new ModuleController()
   ]);
 
   @override
