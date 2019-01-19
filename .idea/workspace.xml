@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7255ee1b-2e50-46e5-a5c0-138a02f9614b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/app/bin/Controllers/Opleidingen/OpleidingSpecificController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Controllers/Opleidingen/OpleidingSpecificController.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/JSON/src/JSONDecoder.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/JSON/src/JSONDecoder.dart" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -63,20 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/910de463-fe29-4f63-94b5-a432c3f78ad3/console.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="70" selection-start-line="3" selection-start-column="70" selection-end-line="3" selection-end-column="70" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ModuleController.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/bin/Controllers/Modules/ModuleController.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="22" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="22" />
+            <state relative-caret-position="289">
+              <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -120,7 +112,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OpleidingSpecificController.dart" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OpleidingSpecificController.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/bin/Controllers/Opleidingen/OpleidingSpecificController.dart">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
@@ -128,6 +120,15 @@
               <folding>
                 <element signature="e#0#64#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Module" pinned="false" current-in-tab="false">
+        <entry file="das://910de463-fe29-4f63-94b5-a432c3f78ad3/schema/OOSE/table/Module">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -147,8 +148,8 @@
       <file leaf-file-name="CreateModuleModel.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/bin/RequestModels/CreateModuleModel.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="238">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -156,11 +157,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CreateOpleidingModel.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/bin/RequestModels/CreateOpleidingModel.dart">
+      <file leaf-file-name="JSONDecoder.dart" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/lib/JSON/src/JSONDecoder.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="23" selection-end-line="13" selection-end-column="1" />
+            <state relative-caret-position="415">
+              <caret line="55" column="3" lean-forward="true" selection-start-line="55" selection-start-column="3" selection-end-line="55" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#22#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -177,7 +181,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>_EnsureInstanceInObjects</find>
       <find>_FormatColumn</find>
       <find>pr</find>
       <find>_invokeControllerMethod</find>
@@ -207,6 +210,7 @@
       <find>_requestPath</find>
       <find>Call</find>
       <find>jsonC</find>
+      <find>_SetField</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -242,7 +246,6 @@
         <option value="$PROJECT_DIR$/app/lib/Router/src/PathComparator.dart" />
         <option value="$PROJECT_DIR$/app/bin/Controllers/Students/StudentenController.dart" />
         <option value="$PROJECT_DIR$/app/lib/Router/Router.dart" />
-        <option value="$PROJECT_DIR$/app/lib/JSON/src/JSONDecoder.dart" />
         <option value="$PROJECT_DIR$/app/bin/Controllers/Students/StudentController.dart" />
         <option value="$PROJECT_DIR$/app/bin/RequestModels/CreateStudentModel.dart" />
         <option value="$PROJECT_DIR$/app/lib/ORM/src/DatabaseActions/AAction.dart" />
@@ -264,8 +267,9 @@
         <option value="$PROJECT_DIR$/app/bin/Controllers/Modules/ModuleSpecificController.dart" />
         <option value="$PROJECT_DIR$/app/bin/Controllers/Modules/ModuleController.dart" />
         <option value="$PROJECT_DIR$/app/bin/Router/OOSERouter.dart" />
-        <option value="$PROJECT_DIR$/app/bin/RequestModels/CreateModuleModel.dart" />
         <option value="$PROJECT_DIR$/app/bin/Controllers/Opleidingen/OpleidingSpecificController.dart" />
+        <option value="$PROJECT_DIR$/app/bin/RequestModels/CreateModuleModel.dart" />
+        <option value="$PROJECT_DIR$/app/lib/JSON/src/JSONDecoder.dart" />
       </list>
     </option>
   </component>
@@ -337,6 +341,43 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="bin" type="462c0819:PsiDirectoryNode" />
               <item name="RequestModels" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OOSE_Webservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OOSE_Webservice" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="bin" type="462c0819:PsiDirectoryNode" />
+              <item name="Router" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OOSE_Webservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OOSE_Webservice" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OOSE_Webservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OOSE_Webservice" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="JSON" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OOSE_Webservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OOSE_Webservice" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="JSON" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OOSE_Webservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OOSE_Webservice" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="JSON" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Annotations" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -473,19 +514,19 @@
       <workItem from="1547765083564" duration="36817000" />
       <workItem from="1547839116443" duration="4985000" />
       <workItem from="1547846303684" duration="1380000" />
-      <workItem from="1547848046621" duration="16845000" />
+      <workItem from="1547848046621" duration="19254000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="377497000" />
+    <option name="totallyTimeSpent" value="379906000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="15" sideWeight="0.44375" side_tool="true" visible="true" weight="0.37254903" />
+      <window_info anchor="bottom" id="Event Log" order="15" sideWeight="0.44427082" side_tool="true" visible="true" weight="0.37254903" />
       <window_info anchor="right" id="Maven Projects" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Dart Analysis" order="9" weight="0.29520696" />
@@ -503,9 +544,9 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Run" order="4" sideWeight="0.7859375" weight="0.18627451" />
       <window_info anchor="bottom" id="Version Control" order="13" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.55625" visible="true" weight="0.37254903" />
-      <window_info anchor="bottom" id="Database Console" order="0" sideWeight="0.5932292" weight="0.24291939" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2515625" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.55572915" visible="true" weight="0.37254903" />
+      <window_info anchor="bottom" id="Database Console" order="0" sideWeight="0.59270835" weight="0.27559912" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2515625" />
       <window_info anchor="bottom" id="Find" order="3" sideWeight="0.49427083" weight="0.2603486" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="4" side_tool="true" />
@@ -602,16 +643,6 @@
           <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
           <folding>
             <element signature="e#17#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/JSON/src/JSONDecoder.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -863,23 +894,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/bin/Controllers/Modules/ModuleController.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://910de463-fe29-4f63-94b5-a432c3f78ad3/schema/OOSE/table/Module">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://910de463-fe29-4f63-94b5-a432c3f78ad3/schema/OOSE/table/Opleiding">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -900,26 +914,6 @@
           <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/bin/Controllers/Modules/ModulesController.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/bin/RequestModels/CreateModuleModel.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -960,6 +954,53 @@
           <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="e#0#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://910de463-fe29-4f63-94b5-a432c3f78ad3/schema/OOSE/table/Module">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bin/Controllers/Modules/ModulesController.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bin/Controllers/Modules/ModuleController.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bin/RequestModels/CreateModuleModel.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/JSON/src/JSONDecoder.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="55" column="3" lean-forward="true" selection-start-line="55" selection-start-column="3" selection-end-line="55" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
           </folding>
         </state>
       </provider>

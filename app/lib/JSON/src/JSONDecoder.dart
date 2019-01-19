@@ -29,7 +29,7 @@ class JSONDecoder{
   void _SetField(InstanceMirror instance, Map<String, dynamic> valueHash, VariableMirror mirror){
     String variableName = MirrorSystem.getName(mirror.simpleName);
     JSONAnnotation annotation = _FindAnnotation(mirror);
-    dynamic value = valueHash[variableName];
+    dynamic value = _ProcessValue(valueHash[variableName]);
 
     if(annotation != null && value != null){
       value = annotation.ToValue(value, mirror, this);
@@ -37,6 +37,24 @@ class JSONDecoder{
 
     instance.setField(new Symbol(variableName), value);
   }
+
+  dynamic _ProcessValue(dynamic value){
+    if(_IsInt(value)){ return int.parse(value); }
+    if(_IsDouble(value)){ return double.parse(value); }
+
+    return value;
+  }
+
+  bool _IsInt(dynamic value) {
+    if(value == null) { return false; }
+    return int.tryParse(value) != null;
+  }
+
+  bool _IsDouble(dynamic value) {
+    if(value == null) { return false;}
+    return double.tryParse(value) != null;
+  }
+
 
   dynamic _CreateInstanceOf<T>(ClassMirror mirror){
     return mirror.newInstance(new Symbol(''), []).reflectee;
