@@ -83,6 +83,8 @@ class InsertAction<T> extends AAction<T>{
     // Always build query
     String query = await BuildQuery();
 
+    PrintQuery(query);
+
     // Check primary key
     FieldAnnotationDecorator<Column> primary = _reflection.PrimaryKey;
     if(primary != null){ return await _ExecuteWithPrimaryIdentifier(primary, query); } // Execute when there is a primary key
