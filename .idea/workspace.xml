@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7255ee1b-2e50-46e5-a5c0-138a02f9614b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/Server/Server.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Server/Server.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/Router/Router.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/Router/Router.dart" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -540,12 +538,12 @@
       <workItem from="1547765083564" duration="36817000" />
       <workItem from="1547839116443" duration="4985000" />
       <workItem from="1547846303684" duration="1380000" />
-      <workItem from="1547848046621" duration="20149000" />
+      <workItem from="1547848046621" duration="20269000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="380801000" />
+    <option name="totallyTimeSpent" value="380921000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
