@@ -1,14 +1,13 @@
 import 'package:OOSE/ORM/src/QueryBuilder/ORMQueryBuilder.dart';
 import 'package:OOSE/Router/Router.dart';
+import '../../Database/DB.dart';
+import '../../Models/Opleiding.dart';
 
-import '../Database/DB.dart';
-import '../Models/Opleiding.dart';
-
-class OpleidingController implements IController, IGetRequest{
+class OpleidingSpecificController implements IController, IGetRequest{
 
   @override
   String path() {
-    return "Opleiding/:id";
+    return "Education/:id";
   }
 
   @override
