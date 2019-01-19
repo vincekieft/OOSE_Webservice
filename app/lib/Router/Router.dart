@@ -61,14 +61,15 @@ abstract class Router{
   }
 
   void _PrintRequest(HttpRequest request,PathComparator comparator){
-    print("==================================================================================");
+    print("");
+    print("===================================================================================");
     print("${request.method} Request: ${request.uri.toString()}. Contents:");
     if(comparator != null) {
       comparator.Arguments.forEach((String key, dynamic value) {
         print("Argument: ${key} : ${value.toString()}");
       });
     }
-    print("___________________________________________________________________________________");
+    print("");
   }
 
   PathComparator _findPathMatch(String path){
