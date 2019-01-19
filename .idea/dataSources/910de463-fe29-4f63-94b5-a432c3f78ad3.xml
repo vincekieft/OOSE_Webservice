@@ -1122,13 +1122,13 @@
     <table id="283" parent="2" name="Les">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="284" parent="2" name="LesLeerdoel">
+    <table id="284" parent="2" name="LesDocent">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="285" parent="2" name="Module">
+    <table id="285" parent="2" name="LesLeerdoel">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="286" parent="2" name="ModuleDocent">
+    <table id="286" parent="2" name="Module">
       <Engine>InnoDB</Engine>
     </table>
     <table id="287" parent="2" name="ModuleStudent">
@@ -1177,7 +1177,7 @@
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="297" parent="278" name="STUDENT_B_FK">
+    <index id="297" parent="278" name="BEOORDELING_STUDENT_FK">
       <ColNames>student_id</ColNames>
     </index>
     <index id="298" parent="278" name="TOETSBAAR_OBJECT_B_FK">
@@ -1188,407 +1188,481 @@
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="300" parent="279" name="id">
+    <foreign-key id="300" parent="278" name="BEOORDELING_STUDENT_FK">
+      <ColNames>student_id</ColNames>
+      <RefSchemaName>OOSE</RefSchemaName>
+      <RefTableName>Student</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="301" parent="278" name="TOETSBAAR_OBJECT_B_FK">
+      <ColNames>toetsbaar_object_id</ColNames>
+      <RefSchemaName>OOSE</RefSchemaName>
+      <RefTableName>ToetsbaarObject</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="302" parent="279" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="301" parent="279" name="toetsbaar_object_id">
+    <column id="303" parent="279" name="toetsbaar_object_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="302" parent="279" name="PRIMARY">
+    <index id="304" parent="279" name="TOETSBAAR_OBJECT_BC_FK">
+      <ColNames>toetsbaar_object_id</ColNames>
+    </index>
+    <key id="305" parent="279" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="303" parent="280" name="id">
+    <foreign-key id="306" parent="279" name="TOETSBAAR_OBJECT_BC_FK">
+      <ColNames>toetsbaar_object_id</ColNames>
+      <RefSchemaName>OOSE</RefSchemaName>
+      <RefTableName>ToetsbaarObject</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="307" parent="280" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="304" parent="280" name="toetsbaar_object_id">
+    <column id="308" parent="280" name="beoordelingscriteria_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="305" parent="280" name="beoordelingscriteria_id">
+    <column id="309" parent="280" name="leerdoel_id">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="306" parent="280" name="criteria">
+    <column id="310" parent="280" name="criteria">
       <Position>4</Position>
       <DataType>json|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="307" parent="280" name="PRIMARY">
+    <index id="311" parent="280" name="BEOORDELINGSCRITERIA_B_FK">
+      <ColNames>beoordelingscriteria_id</ColNames>
+    </index>
+    <index id="312" parent="280" name="LEERDOEL_B_FK">
+      <ColNames>leerdoel_id</ColNames>
+    </index>
+    <key id="313" parent="280" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="308" parent="281" name="id">
+    <foreign-key id="314" parent="280" name="BEOORDELINGSCRITERIA_B_FK">
+      <ColNames>beoordelingscriteria_id</ColNames>
+      <RefSchemaName>OOSE</RefSchemaName>
+      <RefTableName>Beoordelingscriteria</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="315" parent="280" name="LEERDOEL_B_FK">
+      <ColNames>leerdoel_id</ColNames>
+      <RefSchemaName>OOSE</RefSchemaName>
+      <RefTableName>Leerdoel</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="316" parent="281" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="309" parent="281" name="persoon_id">
+    <column id="317" parent="281" name="persoon_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="310" parent="281" name="PERSON_DOCENT_FK">
+    <index id="318" parent="281" name="PERSON_DOCENT_FK">
       <ColNames>persoon_id</ColNames>
     </index>
-    <key id="311" parent="281" name="PRIMARY">
+    <key id="319" parent="281" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="312" parent="281" name="PERSON_DOCENT_FK">
+    <foreign-key id="320" parent="281" name="PERSON_DOCENT_FK">
       <ColNames>persoon_id</ColNames>
       <RefSchemaName>OOSE</RefSchemaName>
       <RefTableName>Persoon</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="313" parent="282" name="id">
+    <column id="321" parent="282" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="314" parent="282" name="naam">
+    <column id="322" parent="282" name="naam">
       <Position>2</Position>
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="315" parent="282" name="beschrijving">
+    <column id="323" parent="282" name="beschrijving">
       <Position>3</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>text|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="316" parent="282" name="les_id">
-      <Position>4</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="317" parent="282" name="PRIMARY">
+    <key id="324" parent="282" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="318" parent="283" name="id">
+    <column id="325" parent="283" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="319" parent="283" name="datum">
+    <column id="326" parent="283" name="datum">
       <Position>2</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="320" parent="283" name="lesstof">
+    <column id="327" parent="283" name="lesstof">
       <Position>3</Position>
       <DataType>json|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="321" parent="283" name="docent_id">
+    <column id="328" parent="283" name="module_id">
       <Position>4</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="322" parent="283" name="module_id">
-      <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="323" parent="283" name="DOCENT_FK">
-      <ColNames>docent_id</ColNames>
-    </index>
-    <index id="324" parent="283" name="MODULE_FK">
+    <index id="329" parent="283" name="MODULE_FK">
       <ColNames>module_id</ColNames>
     </index>
-    <key id="325" parent="283" name="PRIMARY">
+    <key id="330" parent="283" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="326" parent="283" name="MODULE_FK">
+    <foreign-key id="331" parent="283" name="MODULE_FK">
       <ColNames>module_id</ColNames>
       <RefSchemaName>OOSE</RefSchemaName>
       <RefTableName>Module</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="327" parent="284" name="id">
+    <column id="332" parent="284" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="328" parent="284" name="les_id">
+    <column id="333" parent="284" name="les_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="329" parent="284" name="leerdoel_id">
+    <column id="334" parent="284" name="docent_id">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="330" parent="284" name="les_id">
+    <index id="335" parent="284" name="les_id">
       <ColNames>les_id</ColNames>
     </index>
-    <index id="331" parent="284" name="leerdoel_id">
-      <ColNames>leerdoel_id</ColNames>
+    <index id="336" parent="284" name="docent_id">
+      <ColNames>docent_id</ColNames>
     </index>
-    <key id="332" parent="284" name="PRIMARY">
+    <key id="337" parent="284" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="333" parent="285" name="id">
+    <foreign-key id="338" parent="284" name="LES_DOCENT_FK">
+      <ColNames>les_id</ColNames>
+      <RefSchemaName>OOSE</RefSchemaName>
+      <RefTableName>Les</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="339" parent="284" name="DOCENT_LES_FK">
+      <ColNames>docent_id</ColNames>
+      <RefSchemaName>OOSE</RefSchemaName>
+      <RefTableName>Docent</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="340" parent="285" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="334" parent="285" name="naam">
+    <column id="341" parent="285" name="les_id">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="342" parent="285" name="leerdoel_id">
+      <Position>3</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="343" parent="285" name="les_id">
+      <ColNames>les_id</ColNames>
+    </index>
+    <index id="344" parent="285" name="leerdoel_id">
+      <ColNames>leerdoel_id</ColNames>
+    </index>
+    <key id="345" parent="285" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="346" parent="285" name="LES_LEERDOEL_FK">
+      <ColNames>les_id</ColNames>
+      <RefSchemaName>OOSE</RefSchemaName>
+      <RefTableName>Les</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="347" parent="285" name="LEERDOEL_LES_FK">
+      <ColNames>leerdoel_id</ColNames>
+      <RefSchemaName>OOSE</RefSchemaName>
+      <RefTableName>Leerdoel</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="348" parent="286" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="349" parent="286" name="naam">
       <Position>2</Position>
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="335" parent="285" name="beschrijving">
+    <column id="350" parent="286" name="beschrijving">
       <Position>3</Position>
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="336" parent="285" name="startdatum">
+    <column id="351" parent="286" name="startdatum">
       <Position>4</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="337" parent="285" name="einddatum">
+    <column id="352" parent="286" name="einddatum">
       <Position>5</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="338" parent="285" name="opleiding_id">
+    <column id="353" parent="286" name="opleiding_id">
       <Position>6</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="339" parent="285" name="OPLEIDING_FK">
+    <index id="354" parent="286" name="OPLEIDING_FK">
       <ColNames>opleiding_id</ColNames>
     </index>
-    <key id="340" parent="285" name="PRIMARY">
+    <key id="355" parent="286" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="341" parent="285" name="OPLEIDING_FK">
+    <foreign-key id="356" parent="286" name="OPLEIDING_FK">
       <ColNames>opleiding_id</ColNames>
       <RefSchemaName>OOSE</RefSchemaName>
       <RefTableName>Opleiding</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="342" parent="286" name="id">
+    <column id="357" parent="287" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="343" parent="286" name="module_id">
+    <column id="358" parent="287" name="module_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="344" parent="286" name="docent_id">
+    <column id="359" parent="287" name="student_id">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="345" parent="286" name="module_id">
+    <index id="360" parent="287" name="module_id">
       <ColNames>module_id</ColNames>
     </index>
-    <index id="346" parent="286" name="docent_id">
-      <ColNames>docent_id</ColNames>
-    </index>
-    <key id="347" parent="286" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="348" parent="287" name="id">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="349" parent="287" name="module_id">
-      <Position>2</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="350" parent="287" name="student_id">
-      <Position>3</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="351" parent="287" name="module_id">
-      <ColNames>module_id</ColNames>
-    </index>
-    <index id="352" parent="287" name="student_id">
+    <index id="361" parent="287" name="student_id">
       <ColNames>student_id</ColNames>
     </index>
-    <key id="353" parent="287" name="PRIMARY">
+    <key id="362" parent="287" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="354" parent="288" name="id">
+    <foreign-key id="363" parent="287" name="MODULE_STUDENT_FK">
+      <ColNames>module_id</ColNames>
+      <RefSchemaName>OOSE</RefSchemaName>
+      <RefTableName>Module</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="364" parent="287" name="STUDENT_MODULE_FK">
+      <ColNames>student_id</ColNames>
+      <RefSchemaName>OOSE</RefSchemaName>
+      <RefTableName>Student</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="365" parent="288" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="355" parent="288" name="naam">
+    <column id="366" parent="288" name="naam">
       <Position>2</Position>
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="356" parent="288" name="startjaar">
+    <column id="367" parent="288" name="startjaar">
       <Position>3</Position>
       <DataType>int(4)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="357" parent="288" name="PRIMARY">
+    <key id="368" parent="288" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="358" parent="289" name="id">
+    <column id="369" parent="289" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="359" parent="289" name="voornaam">
+    <column id="370" parent="289" name="voornaam">
       <Position>2</Position>
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="360" parent="289" name="achternaam">
+    <column id="371" parent="289" name="achternaam">
       <Position>3</Position>
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="361" parent="289" name="emailadres">
+    <column id="372" parent="289" name="emailadres">
       <Position>4</Position>
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="362" parent="289" name="PRIMARY">
+    <key id="373" parent="289" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="363" parent="290" name="id">
+    <column id="374" parent="290" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="364" parent="290" name="persoon_id">
+    <column id="375" parent="290" name="persoon_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="365" parent="290" name="PERSON_STUDENT_FK">
+    <index id="376" parent="290" name="PERSON_STUDENT_FK">
       <ColNames>persoon_id</ColNames>
     </index>
-    <key id="366" parent="290" name="PRIMARY">
+    <key id="377" parent="290" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="367" parent="290" name="PERSON_STUDENT_FK">
+    <foreign-key id="378" parent="290" name="PERSON_STUDENT_FK">
       <ColNames>persoon_id</ColNames>
       <RefSchemaName>OOSE</RefSchemaName>
       <RefTableName>Persoon</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="368" parent="291" name="id">
+    <column id="379" parent="291" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="369" parent="291" name="module_id">
+    <column id="380" parent="291" name="module_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="370" parent="291" name="naam">
+    <column id="381" parent="291" name="naam">
       <Position>3</Position>
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="371" parent="291" name="inleverdatum">
+    <column id="382" parent="291" name="inleverdatum">
       <Position>4</Position>
       <DataType>date|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="372" parent="291" name="MODULE_TO_FK">
+    <column id="383" parent="291" name="weging">
+      <Position>5</Position>
+      <DataType>int(3)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="384" parent="291" name="MODULE_TO_FK">
       <ColNames>module_id</ColNames>
     </index>
-    <key id="373" parent="291" name="PRIMARY">
+    <key id="385" parent="291" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+    <foreign-key id="386" parent="291" name="MODULE_TO_FK">
+      <ColNames>module_id</ColNames>
+      <RefSchemaName>OOSE</RefSchemaName>
+      <RefTableName>Module</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
   </database-model>
 </dataSource>

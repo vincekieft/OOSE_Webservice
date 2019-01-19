@@ -47,12 +47,16 @@ class JSONDecoder{
 
   bool _IsInt(dynamic value) {
     if(value == null) { return false; }
-    return int.tryParse(value) != null;
+    try {
+      return int.tryParse(value) != null;
+    } catch(e){ return false; }
   }
 
   bool _IsDouble(dynamic value) {
     if(value == null) { return false;}
-    return double.tryParse(value) != null;
+    try {
+      return double.tryParse(value) != null;
+    } catch(e){ return false; }
   }
 
 
