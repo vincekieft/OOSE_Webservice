@@ -26,13 +26,7 @@ class LeerdoelRepository{
   Future<List<Leerdoel>> GetAllLesUnusedLeerdoelen(int lesId) async{
     ORMQueryBuilder<Leerdoel> builder = DB.orm.StartQuery<Leerdoel>();
     builder.LeftJoin(Module).EqualColumn("module_id", "id");
-
-    // Sub query to for many to many
-    QueryBuilder subQuery = new QueryBuilder("LesLeerdoel");
-    subQuery.Select().SetColumn("leerdoel_id");
-    subQuery.Where().Equal("les_id", lesId);
-
-    builder.Where().NotIn("id", subQuery.WriteAsSubquery());
+    builder.Where().NotIn("id", _GetAllLesLeerdoelenForLes(lesId).WriteAsSubquery());
     return await builder.Execute();
   }
 
@@ -49,17 +43,20 @@ class LeerdoelRepository{
   Future<List<Leerdoel>> GetAllLesLeerdoelen(int lesId) async{
     ORMQueryBuilder<Leerdoel> builder = DB.orm.StartQuery<Leerdoel>();
     builder.LeftJoin(Module).EqualColumn("module_id", "id");
-
-    // Sub query to for many to many
-    QueryBuilder subQuery = new QueryBuilder("LesLeerdoel");
-    subQuery.Select().SetColumn("leerdoel_id");
-    subQuery.Where().Equal("les_id", lesId);
-
-    builder.Where().In("id", subQuery.WriteAsSubquery());
+    builder.Where().In("id", _GetAllLesLeerdoelenForLes(lesId).WriteAsSubquery());
     return await builder.Execute();
   }
 
   // Private methods
+
+  QueryBuilder _GetAllLesLeerdoelenForLes(int lesId){
+    QueryBuilder subQuery = new QueryBuilder("LesLeerdoel");
+    subQuery.Select().SetColumn("leerdoel_id");
+    subQuery.Where().Equal("les_id", lesId);
+
+    return subQuery;
+  }
+
   QueryBuilder _GetAllLeerdoelenConverdByModule(int moduleId){
     // Select all module lessen subquery
     QueryBuilder lessenSub = new QueryBuilder("Les");
