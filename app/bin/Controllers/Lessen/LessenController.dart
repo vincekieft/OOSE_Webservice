@@ -8,7 +8,6 @@ class LessenController extends ModuleSpecificController{
     return "${super.path()}/Classes";
   }
 
-
   @override
   Future<Object> GET(Map<String, dynamic> args) async {
     return await new LesRepository().GetAllModuleLessen(args["id"]);

@@ -10,8 +10,8 @@ class JoinSection extends SelectionSection<JoinSection> implements IWritable {
   int _tableIndex;
 
   JoinSection(String joinType, int tableIndex,QueryBuilder builder) : super(builder){
-   _joinType = joinType;
-   _tableIndex = tableIndex;
+    _joinType = joinType;
+    _tableIndex = tableIndex;
   }
 
   // Public methods

@@ -18,7 +18,7 @@ export 'package:OOSE/QueryBuilder/src/QuerySections/JoinSection.dart';
 class QueryBuilder{
 
   // Private variables
-  Map<Type, IWritable> _sections = new Map<Type, IWritable>();
+  Map<String, IWritable> _sections = new Map<String, IWritable>();
   List<String> _table = new List<String>();
 
   QueryBuilder([String table = null]){
@@ -64,11 +64,17 @@ class QueryBuilder{
 
   JoinSection Join(String table, String type){
     int tableIndex = _AddTargetTable(table);
-    return _ensureSectionArgs<JoinSection>([type, tableIndex, this]);
+    JoinSection join = _ensureSectionArgs<JoinSection>([type, tableIndex, this], table);
+    return join;
   }
 
-  T EnsureSection<T extends IWritable>(){
-    return _ensureSectionArgs<T>([this]);
+  T EnsureSection<T extends IWritable>([String extra = ""]){
+    return _ensureSectionArgs<T>([this], extra);
+  }
+
+  int EnsureTable(String table){
+    if(!Tables.contains(table)){ Tables.add(table); }
+    return Tables.indexOf(table);
   }
 
   // Get methods
@@ -84,13 +90,14 @@ class QueryBuilder{
     return _table.indexOf(table);
   }
 
-  T _ensureSectionArgs<T extends IWritable>(List args){
+  T _ensureSectionArgs<T extends IWritable>(List args, [String extraIdentifier = ""]){
     Type type = T;
-    if(!_sections.containsKey(type)) {
+    String identifier = type.toString() + extraIdentifier;
+    if(!_sections.containsKey(identifier)) {
       ClassMirror mirror = reflectClass(type);
-      _sections[type] = mirror.newInstance(const Symbol(''), args).reflectee as T;
+      _sections[identifier] = mirror.newInstance(const Symbol(''), args).reflectee as T;
     }
-    return _sections[type];
+    return _sections[identifier];
   }
 
   // Get / Set

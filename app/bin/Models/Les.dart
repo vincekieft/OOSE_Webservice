@@ -1,5 +1,6 @@
 import 'package:OOSE/JSON/JSON.dart';
 import 'package:OOSE/ORM/ORM.dart';
+import 'Document.dart';
 import 'Module.dart';
 
 @Table("Les")
@@ -15,8 +16,9 @@ class Les{
   @Column("datum")
   DateTime datum;
 
-  @Column("lesstof")
-  String lesstof;
+  @JSONObject()
+  @HasOne("document_id")
+  Document document;
 
   @JSONObject()
   @HasOne("module_id")
