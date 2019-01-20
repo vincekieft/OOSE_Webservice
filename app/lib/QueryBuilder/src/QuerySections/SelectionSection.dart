@@ -13,8 +13,16 @@ class SelectionSection<T extends IWritable> extends Section{
     return AddCriteria(column, "=", value, table);
   }
 
+  T NotEqual(String column, dynamic value, [String table = null]){
+    return AddCriteria(column, "!=", value, table);
+  }
+
   T EqualColumn(String column, String targetColumn, [String targetTable = null, String table = null]){
     return AddCriteriaColumn(column, "=", targetColumn, targetTable, table);
+  }
+
+  T NotEqualColumn(String column, String targetColumn, [String targetTable = null, String table = null]){
+    return AddCriteriaColumn(column, "!=", targetColumn, targetTable, table);
   }
 
   T GreaterThan(String column, dynamic value, [String table = null]){
