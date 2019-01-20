@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:OOSE/QueryBuilder/src/IWritable.dart';
 import 'package:OOSE/QueryBuilder/src/Utils/ArrayUtils.dart';
 
@@ -17,6 +19,7 @@ class Criteria implements IWritable{
 
   // Private methods
   String get valueToString{
+
     switch(_value.runtimeType){
       case String:
         String s = _value.toString();
@@ -28,7 +31,7 @@ class Criteria implements IWritable{
         break;
     }
 
-    return _value.toString();
+    return htmlEscape.convert(_value.toString());
   }
 
   // Render method
