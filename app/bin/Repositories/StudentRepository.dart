@@ -16,14 +16,21 @@ class StudentRepository{
   Future<List<Student>> GetAllModuleStudents(int moduleId) async{
     ORMQueryBuilder<Student> builder = DB.orm.StartQuery<Student>();
     builder.LeftJoin(Persoon).EqualColumn("persoon_id", "id");
+    builder.Where().In("id", SelectModuleStudentsQuery(moduleId).WriteAsSubquery());
+    return await builder.Execute();
+  }
 
-    // Sub query
+  Future<List<Student>> GetAllUnusedModuleStudents(int moduleId) async{
+    ORMQueryBuilder<Student> builder = DB.orm.StartQuery<Student>();
+    builder.LeftJoin(Persoon).EqualColumn("persoon_id", "id");
+    builder.Where().NotIn("id", SelectModuleStudentsQuery(moduleId).WriteAsSubquery());
+    return await builder.Execute();
+  }
+
+  QueryBuilder SelectModuleStudentsQuery(int moduleId){
     QueryBuilder subQuery = new QueryBuilder("ModuleStudent");
     subQuery.Select().SetColumn("student_id");
     subQuery.Where().Equal("module_id", moduleId);
-
-    builder.Where().In("id", subQuery.WriteAsSubquery());
-
-    return await builder.Execute();
+    return subQuery;
   }
 }
