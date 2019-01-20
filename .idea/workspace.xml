@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7255ee1b-2e50-46e5-a5c0-138a02f9614b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/bin/Models/Document.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/Controllers/Lessen/LesSpecificController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Controllers/Lessen/LesSpecificController.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/Controllers/Lessen/LessenController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Controllers/Lessen/LessenController.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/Models/Les.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Models/Les.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/Repositories/LesRepository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Repositories/LesRepository.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/RequestModels/CreateLesModel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/RequestModels/CreateLesModel.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/QueryBuilder/QueryBuilder.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/QueryBuilder/QueryBuilder.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/QueryBuilder/src/QuerySections/JoinSection.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/QueryBuilder/src/QuerySections/JoinSection.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/bin/Controllers/Docenten/LesDocentenUnusedController.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/bin/Controllers/Docenten/LesDocentController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Controllers/Docenten/LesDocentController.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/bin/Repositories/DocentRepository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Repositories/DocentRepository.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/bin/Router/OOSERouter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Router/OOSERouter.dart" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -61,16 +56,35 @@
         <item name="OOSE: schema" type="c314c289:MysqlImplModel$Schema" />
         <item name="Les: table" type="98d5ac3d:MysqlImplModel$Table" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="OOSE@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="OOSE: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="LesDocent: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Document.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/bin/Models/Document.dart">
+      <file leaf-file-name="OOSERouter.dart" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/bin/Router/OOSERouter.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+            <state relative-caret-position="429">
+              <caret line="49" column="40" lean-forward="true" selection-start-line="49" selection-start-column="40" selection-end-line="49" selection-end-column="40" />
+              <folding>
+                <element signature="e#0#17#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LesDocentController.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/bin/Controllers/Docenten/LesDocentController.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="25" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -84,83 +98,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Document" pinned="false" current-in-tab="false">
-        <entry file="das://910de463-fe29-4f63-94b5-a432c3f78ad3/schema/OOSE/table/Document">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+      <file leaf-file-name="DocentController.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/bin/Controllers/Docenten/DocentController.dart">
+          <provider selected="true" editor-type-id="text-editor">
             <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JoinSection.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/lib/QueryBuilder/src/QuerySections/JoinSection.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CreateLesModel.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/bin/RequestModels/CreateLesModel.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+              <caret selection-end-line="20" selection-end-column="1" />
               <folding>
-                <element signature="e#0#33#0" expanded="true" />
+                <element signature="e#0#37#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QueryBuilder.dart" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/lib/QueryBuilder/QueryBuilder.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="97" column="85" lean-forward="true" selection-start-line="97" selection-start-column="85" selection-end-line="97" selection-end-column="86" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LessenController.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/bin/Controllers/Lessen/LessenController.dart">
+      <file leaf-file-name="DocentenController.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/bin/Controllers/Docenten/DocentenController.dart">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
-              <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+              <caret line="12" column="4" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="57" />
               <folding>
-                <element signature="e#0#47#0" expanded="true" />
+                <element signature="e#0#41#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LesRepository.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/bin/Repositories/LesRepository.dart">
+      <file leaf-file-name="LesDocentenUnusedController.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/bin/Controllers/Docenten/LesDocentenUnusedController.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="119">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ORM.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/lib/ORM/ORM.dart">
+      <file leaf-file-name="DocentRepository.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/bin/Repositories/DocentRepository.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="58" column="24" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ORMQueryBuilder.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/lib/ORM/src/QueryBuilder/ORMQueryBuilder.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-221">
-              <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
+            <state relative-caret-position="229">
+              <caret line="19" column="46" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -215,9 +190,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/bin/RequestModels/CreateOpleidingModel.dart" />
-        <option value="$PROJECT_DIR$/app/bin/Controllers/Opleidingen/OpleidingController.dart" />
-        <option value="$PROJECT_DIR$/docker-compose.yml" />
         <option value="$PROJECT_DIR$/app/bin/Repositories/ModulesRepository.dart" />
         <option value="$PROJECT_DIR$/app/bin/Controllers/Modules/ModulesController.dart" />
         <option value="$PROJECT_DIR$/app/bin/Models/Module.dart" />
@@ -242,7 +214,6 @@
         <option value="$PROJECT_DIR$/app/bin/Controllers/Leerdoel/LeerdoelenStatusController.dart" />
         <option value="$PROJECT_DIR$/app/bin/RequestModels/CreateModuleStudent.dart" />
         <option value="$PROJECT_DIR$/app/bin/Models/ModuleStudent.dart" />
-        <option value="$PROJECT_DIR$/app/bin/Controllers/Docenten/LesDocentController.dart" />
         <option value="$PROJECT_DIR$/app/bin/RequestModels/CreateLesDocentModel.dart" />
         <option value="$PROJECT_DIR$/app/bin/Models/LesDocent.dart" />
         <option value="$PROJECT_DIR$/app/bin/RequestModels/CreateModuleStudentModel.dart" />
@@ -256,7 +227,6 @@
         <option value="$PROJECT_DIR$/app/bin/Repositories/StudentRepository.dart" />
         <option value="$PROJECT_DIR$/app/bin/Controllers/Studenten/StudentController.dart" />
         <option value="$PROJECT_DIR$/app/bin/Controllers/Studenten/ModuleUnusedStudentsController.dart" />
-        <option value="$PROJECT_DIR$/app/bin/Router/OOSERouter.dart" />
         <option value="$PROJECT_DIR$/app/bin/Models/Document.dart" />
         <option value="$PROJECT_DIR$/app/bin/Models/Les.dart" />
         <option value="$PROJECT_DIR$/app/bin/RequestModels/CreateLesModel.dart" />
@@ -266,6 +236,11 @@
         <option value="$PROJECT_DIR$/app/lib/QueryBuilder/src/QuerySections/JoinSection.dart" />
         <option value="$PROJECT_DIR$/app/bin/Repositories/LesRepository.dart" />
         <option value="$PROJECT_DIR$/app/lib/QueryBuilder/QueryBuilder.dart" />
+        <option value="$PROJECT_DIR$/app/bin/Controllers/Docenten/DocentenController.dart" />
+        <option value="$PROJECT_DIR$/app/bin/Controllers/Docenten/LesDocentController.dart" />
+        <option value="$PROJECT_DIR$/app/bin/Repositories/DocentRepository.dart" />
+        <option value="$PROJECT_DIR$/app/bin/Controllers/Docenten/LesDocentenUnusedController.dart" />
+        <option value="$PROJECT_DIR$/app/bin/Router/OOSERouter.dart" />
       </list>
     </option>
   </component>
@@ -321,81 +296,13 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="bin" type="462c0819:PsiDirectoryNode" />
               <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="Lessen" type="462c0819:PsiDirectoryNode" />
+              <item name="Docenten" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="OOSE_Webservice" type="b2602c69:ProjectViewProjectNode" />
               <item name="OOSE_Webservice" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="bin" type="462c0819:PsiDirectoryNode" />
-              <item name="Models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OOSE_Webservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OOSE_Webservice" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="bin" type="462c0819:PsiDirectoryNode" />
-              <item name="RequestModels" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OOSE_Webservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OOSE_Webservice" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OOSE_Webservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OOSE_Webservice" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="JSON" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OOSE_Webservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OOSE_Webservice" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="JSON" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OOSE_Webservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OOSE_Webservice" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="JSON" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Annotations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OOSE_Webservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OOSE_Webservice" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="QueryBuilder" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OOSE_Webservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OOSE_Webservice" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="QueryBuilder" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OOSE_Webservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OOSE_Webservice" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="QueryBuilder" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="QuerySections" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OOSE_Webservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OOSE_Webservice" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
               <item name="Router" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -539,19 +446,19 @@
       <workItem from="1547765083564" duration="36817000" />
       <workItem from="1547839116443" duration="4985000" />
       <workItem from="1547846303684" duration="1380000" />
-      <workItem from="1547848046621" duration="45585000" />
+      <workItem from="1547848046621" duration="46238000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="406237000" />
+    <option name="totallyTimeSpent" value="406890000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="15" sideWeight="0.34427083" side_tool="true" visible="true" weight="0.43028322" />
+      <window_info anchor="bottom" id="Event Log" order="15" sideWeight="0.34479168" side_tool="true" visible="true" weight="0.3899782" />
       <window_info anchor="right" id="Maven Projects" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Dart Analysis" order="9" weight="0.29520696" />
@@ -569,9 +476,9 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Run" order="4" sideWeight="0.7859375" weight="0.18627451" />
       <window_info anchor="bottom" id="Version Control" order="13" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.6557292" visible="true" weight="0.43028322" />
-      <window_info anchor="bottom" id="Database Console" order="0" sideWeight="0.58385414" weight="0.34858388" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2609375" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.65520835" visible="true" weight="0.3899782" />
+      <window_info anchor="bottom" id="Database Console" order="0" sideWeight="0.5833333" weight="0.34858388" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2609375" />
       <window_info anchor="bottom" id="Find" order="3" sideWeight="0.49427083" weight="0.2603486" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="4" side_tool="true" />
@@ -596,30 +503,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/lib/QueryBuilder/src/Criteria.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-73">
-          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/bin/Models/Leerdoel.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://910de463-fe29-4f63-94b5-a432c3f78ad3/schema/OOSE/table/LesLeerdoel.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/lib/QueryBuilder/src/QuerySections/WhereSection.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -708,16 +591,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/bin/Controllers/Docenten/DocentController.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="20" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/bin/RequestModels/CreateLesDocentModel.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -744,23 +617,6 @@
           <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://910de463-fe29-4f63-94b5-a432c3f78ad3/schema/OOSE/table/LesDocent">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/bin/Controllers/Docenten/LesDocentController.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="1" lean-forward="true" selection-end-line="22" selection-end-column="1" />
-          <folding>
-            <element signature="e#33#70#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -913,16 +769,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/bin/Router/OOSERouter.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="46" column="30" lean-forward="true" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/bin/Controllers/Lessen/LesController.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -974,13 +820,6 @@
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/910de463-fe29-4f63-94b5-a432c3f78ad3/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="72" selection-start-line="2" selection-start-column="72" selection-end-line="2" selection-end-column="72" />
         </state>
       </provider>
     </entry>
@@ -1046,6 +885,71 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="97" column="85" lean-forward="true" selection-start-line="97" selection-start-column="85" selection-end-line="97" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bin/Controllers/Docenten/DocentController.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="20" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://910de463-fe29-4f63-94b5-a432c3f78ad3/schema/OOSE/table/LesDocent">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/910de463-fe29-4f63-94b5-a432c3f78ad3/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="72" selection-start-line="2" selection-start-column="72" selection-end-line="2" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bin/Repositories/DocentRepository.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="19" column="46" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bin/Controllers/Docenten/DocentenController.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="4" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bin/Controllers/Docenten/LesDocentController.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="25" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bin/Controllers/Docenten/LesDocentenUnusedController.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bin/Router/OOSERouter.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="49" column="40" lean-forward="true" selection-start-line="49" selection-start-column="40" selection-end-line="49" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
