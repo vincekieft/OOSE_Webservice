@@ -1,4 +1,4 @@
-import '../../Repositories/LeerdoelRepository.dart';
+import '../../Singletons/Repositories.dart';
 import '../Lessen/LesSpecificController.dart';
 
 class LesUnusedLeerdoelenController extends LesSpecificController{
@@ -9,6 +9,6 @@ class LesUnusedLeerdoelenController extends LesSpecificController{
 
   @override
   Future<Object> GET(Map<String, dynamic> args) async{
-    return await new LeerdoelRepository().GetAllLesUnusedLeerdoelen(args["id"]);
+    return await Repositories.I().Leerdoelen.GetAllLesUnusedLeerdoelen(args["id"]);
   }
 }

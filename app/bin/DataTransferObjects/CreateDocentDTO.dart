@@ -1,7 +1,7 @@
 import '../Models/Docent.dart';
 import '../Models/Persoon.dart';
 
-class CreateDocentModel{
+class CreateDocentDTO{
 
   String firstname;
   String lastname;

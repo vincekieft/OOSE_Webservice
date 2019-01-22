@@ -1,7 +1,7 @@
 import '../Models/Persoon.dart';
 import '../Models/Student.dart';
 
-class CreateStudentModel{
+class CreateStudentDTO{
   String firstname;
   String lastname;
   String email;

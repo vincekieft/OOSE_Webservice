@@ -1,6 +1,5 @@
 import 'package:OOSE/Router/Router.dart';
-
-import '../../Repositories/ModulesRepository.dart';
+import '../../Singletons/Repositories.dart';
 
 class EducationModulesController implements IController, IGetRequest{
 
@@ -11,7 +10,7 @@ class EducationModulesController implements IController, IGetRequest{
 
   @override
   Future<Object> GET(Map<String, dynamic> args) async{
-    return await new ModulesRepository().GetAllEducationModules(args["id"]);
+    return await Repositories.I().Modulen.GetAllEducationModules(args["id"]);
   }
 
 }

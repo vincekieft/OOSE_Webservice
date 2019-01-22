@@ -1,8 +1,7 @@
 import 'package:OOSE/JSON/JSON.dart';
 import 'package:OOSE/Router/Router.dart';
-import '../../Database/DB.dart';
-import '../../Models/Leerdoel.dart';
-import '../../RequestModels/CreateLeerdoelModel.dart';
+import '../../DataTransferObjects/CreateLeerdoelDTO.dart';
+import '../../Singletons/Repositories.dart';
 
 class LeerdoelController implements IController, IPostRequest{
 
@@ -13,8 +12,8 @@ class LeerdoelController implements IController, IPostRequest{
 
   @override
   Future<Object> POST(Map<String, dynamic> args) {
-    CreateLeerdoelModel create = JSON.Decode<CreateLeerdoelModel>(args["body"]);
-    DB.orm.Persist<Leerdoel>(create.ToLeerdoel());
+    CreateLeerdoelDTO create = JSON.Decode<CreateLeerdoelDTO>(args["body"]);
+    Repositories.I().Leerdoelen.PersistLeerdoel(create.ToLeerdoel());
     return null;
   }
 

@@ -1,8 +1,9 @@
-import 'dart:convert';
-
 import 'package:OOSE/QueryBuilder/src/IWritable.dart';
 import 'package:OOSE/QueryBuilder/src/Utils/ArrayUtils.dart';
 
+/**
+ * Criteria combines a column operator and value into a single statement for a query
+ */
 class Criteria implements IWritable{
 
   // Private variables
@@ -18,8 +19,7 @@ class Criteria implements IWritable{
   }
 
   // Private methods
-  String get valueToString{
-
+  String get _valueToString{
     switch(_value.runtimeType){
       case String:
         String s = _value.toString();
@@ -31,13 +31,13 @@ class Criteria implements IWritable{
         break;
     }
 
-    return htmlEscape.convert(_value.toString());
+    return _value.toString();
   }
 
   // Render method
   @override
   String toString() {
-    return ArrayUtils.JoinList([_column, _operator, valueToString], " ");
+    return ArrayUtils.JoinList([_column, _operator, _valueToString], " ");
   }
 
   @override

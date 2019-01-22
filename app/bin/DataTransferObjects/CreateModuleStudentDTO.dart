@@ -2,7 +2,7 @@ import '../Models/Module.dart';
 import '../Models/ModuleStudent.dart';
 import '../Models/Student.dart';
 
-class CreateModuleStudentModel{
+class CreateModuleStudentDTO{
 
   int student_id;
 

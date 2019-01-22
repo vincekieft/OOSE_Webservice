@@ -10,7 +10,8 @@ class DeleteSection extends Section implements IWritable {
   // Render methods
   @override
   String toString(){
-    return "DELETE ${ArrayUtils.JoinList(builder.Tables, ",")} FROM ${builder.RootTable}";
+    String target = (builder.Tables.length > 1) ? ArrayUtils.JoinList(builder.Tables, ",") : "";
+    return "DELETE ${target} FROM ${builder.RootTable}";
   }
 
   @override

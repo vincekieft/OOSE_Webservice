@@ -11,8 +11,11 @@ class InsertSection extends Section implements IWritable {
   InsertSection(QueryBuilder builder) : super(builder);
 
   // Public methods
-  InsertSection AddValue(String key, dynamic value){
-    _values["${builder.RootTable}.${key}"] = "'${value}'";
+  /**
+   * Add a column value pair to the insert statement
+   */
+  InsertSection AddValue(String column, dynamic value){
+    _values["${builder.RootTable}.${column}"] = "'${value}'";
     return this;
   }
 

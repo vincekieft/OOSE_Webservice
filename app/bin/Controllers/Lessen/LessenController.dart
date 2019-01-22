@@ -1,4 +1,4 @@
-import '../../Repositories/LesRepository.dart';
+import '../../Singletons/Repositories.dart';
 import '../Modules/ModuleSpecificController.dart';
 
 class LessenController extends ModuleSpecificController{
@@ -10,6 +10,6 @@ class LessenController extends ModuleSpecificController{
 
   @override
   Future<Object> GET(Map<String, dynamic> args) async {
-    return await new LesRepository().GetAllModuleLessen(args["id"]);
+    return await Repositories.I().Lessen.GetAllModuleLessen(args["id"]);
   }
 }

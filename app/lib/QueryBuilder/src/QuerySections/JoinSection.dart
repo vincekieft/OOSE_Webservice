@@ -7,53 +7,53 @@ class JoinSection extends SelectionSection<JoinSection> implements IWritable {
 
   // Private variables
   String _joinType;
-  int _tableIndex;
+  String _table;
 
-  JoinSection(String joinType, int tableIndex,QueryBuilder builder) : super(builder){
+  JoinSection(String joinType, String table,QueryBuilder builder) : super(builder){
     _joinType = joinType;
-    _tableIndex = tableIndex;
+    _table = table;
   }
 
   // Public methods
   @override
   JoinSection EqualColumn(String column, String targetColumn, [String targetTable = null, String table = null]){
-    return super.EqualColumn(column, targetColumn, builder.GetTable(_tableIndex), table);
+    return super.EqualColumn(column, targetColumn, _table, table);
   }
 
   @override
   JoinSection GreaterThanColumn(String column, String targetColumn, [String targetTable = null, String table = null]){
-    return super.GreaterThanColumn(column, targetColumn, builder.GetTable(_tableIndex), table);
+    return super.GreaterThanColumn(column, targetColumn, _table, table);
   }
 
   @override
   JoinSection LessThanColumn(String column, String targetColumn, [String targetTable = null, String table = null]){
-    return super.LessThanColumn(column, targetColumn, builder.GetTable(_tableIndex), table);
+    return super.LessThanColumn(column, targetColumn, _table, table);
   }
 
   @override
   JoinSection GreaterEqualThanColumn(String column, String targetColumn, [String targetTable = null, String table = null]){
-    return super.GreaterEqualThanColumn(column, targetColumn, builder.GetTable(_tableIndex), table);
+    return super.GreaterEqualThanColumn(column, targetColumn, _table, table);
   }
 
   @override
   JoinSection LessEqualThanColumn(String column, String targetColumn, [String targetTable = null, String table = null]){
-    return super.LessEqualThanColumn(column, targetColumn, builder.GetTable(_tableIndex), table);
+    return super.LessEqualThanColumn(column, targetColumn, _table, table);
   }
 
   @override
   JoinSection LikeColumn(String column, String targetColumn, [String targetTable = null, String table = null]){
-    return super.LikeColumn(column, targetColumn, builder.GetTable(_tableIndex), table);
+    return super.LikeColumn(column, targetColumn, _table, table);
   }
 
   @override
   JoinSection NotLikeColumn(String column, String targetColumn, [String targetTable = null, String table = null]){
-    return super.NotLikeColumn(column, targetColumn, builder.GetTable(_tableIndex), table);
+    return super.NotLikeColumn(column, targetColumn, _table, table);
   }
 
   // Render method
   @override
   String toString() {
-    return "${_joinType} ${builder.GetTable(_tableIndex)} ON ${ArrayUtils.JoinWritables(SelectionCreteria, " AND ")}";
+    return "${_joinType} ${_table} ON ${ArrayUtils.JoinWritables(SelectionCreteria, " AND ")}";
   }
 
   @override

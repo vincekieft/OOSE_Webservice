@@ -1,4 +1,4 @@
-import '../../Repositories/LeerdoelRepository.dart';
+import '../../Singletons/Repositories.dart';
 import '../Modules/ModuleSpecificController.dart';
 
 class ModuleLeerdoelenController extends ModuleSpecificController{
@@ -9,6 +9,6 @@ class ModuleLeerdoelenController extends ModuleSpecificController{
 
   @override
   Future<Object> GET(Map<String, dynamic> args) async{
-    return await new LeerdoelRepository().GetAllModuleLeerdoelen(args["id"]);
+    return await Repositories.I().Leerdoelen.GetAllModuleLeerdoelen(args["id"]);
   }
 }

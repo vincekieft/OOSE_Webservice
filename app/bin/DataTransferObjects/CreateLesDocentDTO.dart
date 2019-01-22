@@ -2,7 +2,7 @@ import '../Models/Docent.dart';
 import '../Models/Les.dart';
 import '../Models/LesDocent.dart';
 
-class CreateLesDocentModel{
+class CreateLesDocentDTO{
 
   int teacher_id;
 

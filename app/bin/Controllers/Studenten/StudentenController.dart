@@ -1,5 +1,5 @@
 import 'package:OOSE/Router/Router.dart';
-import '../../Repositories/StudentRepository.dart';
+import '../../Singletons/Repositories.dart';
 
 class StudentenController implements IController, IGetRequest{
 
@@ -10,7 +10,7 @@ class StudentenController implements IController, IGetRequest{
 
   @override
   Future<Object> GET(Map<String, dynamic> args) async {
-    return await new StudentRepository().GetAllStudents();
+    return await Repositories.I().Studenten.GetAllStudents();
   }
 
 }

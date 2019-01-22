@@ -1,7 +1,7 @@
 import '../Models/Module.dart';
 import '../Models/Opleiding.dart';
 
-class CreateModuleModel{
+class CreateModuleDTO{
   String name;
   DateTime startdate;
   DateTime enddate;

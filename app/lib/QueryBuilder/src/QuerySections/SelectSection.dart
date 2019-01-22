@@ -13,51 +13,67 @@ class SelectSection extends Section implements IWritable{
   SelectSection(QueryBuilder builder) : super(builder);
 
   // Public methods
+
+  /**
+   * Select a single sql function
+   */
   SelectSection SelectSingleFunction(String function, String Name){
-    IgnoreFrom();
+    _IgnoreFrom();
     _columns.add(new Criteria("${function}()", "AS", Name));
     return this;
   }
 
+  /**
+   * Select all columns from a table
+   */
   SelectSection SelectAll([String table]){
     return AddCriteria("*", null, null, table);
   }
 
+  /**
+   * Add a column select to the select section
+   */
   SelectSection SetColumn(String column, [String table]){
-    return SetNamedColumn(column,column);
+    return SetNamedColumn(column,column, table);
   }
 
+  /**
+   * Add a column select to the select section with a given alias
+   */
   SelectSection SetNamedColumn(String column, String Name, [String table]){
     return AddCriteria(column,"AS",Name,table);
   }
 
+  /**
+   * Add selection criteria to the select section
+   */
   SelectSection AddCriteria(String column, String operator, String Name, [String table]){
     table = _EnsureTable(table);
     _columns.add(new Criteria("${table}.${column}", operator, Name));
     return this;
   }
 
-  SelectSection IgnoreFrom(){
-    _ignoreFrom = true;
-    return this;
-  }
-
-  SelectSection ActivateFrom(){
+  // Private methods
+  SelectSection _ActivateFrom(){
     _ignoreFrom = false;
     return this;
   }
 
-  // Private methods
+  SelectSection _IgnoreFrom(){
+    _ignoreFrom = true;
+    return this;
+  }
+
   String _EnsureTable(String table){
     return (table != null)? table : builder.RootTable;
   }
 
   // Getters
-  String get Select{
+  String get _Select{
     return "SELECT ${ArrayUtils.JoinWritables(_columns, ",")}";
   }
 
-  String get From{
+  String get _From{
     if(_ignoreFrom){return null;}
     return "FROM ${builder.RootTable}";
   }
@@ -65,7 +81,7 @@ class SelectSection extends Section implements IWritable{
   // Render method
   @override
   String toString(){
-    return ArrayUtils.JoinList([Select,From], " ");
+    return ArrayUtils.JoinList([_Select,_From], " ");
   }
 
   @override

@@ -12,8 +12,11 @@ class UpdateSection extends Section implements IWritable {
   UpdateSection(QueryBuilder builder) : super(builder);
 
   // Public methods
-  UpdateSection AddValue(String key, dynamic value){
-    _values.add(new Criteria("${builder.RootTable}.${key}", "=", value));
+  /**
+   * Add a column value pair to the update statement. These columns will be updated
+   */
+  UpdateSection AddValue(String column, dynamic value){
+    _values.add(new Criteria("${builder.RootTable}.${column}", "=", value));
     return this;
   }
 

@@ -1,7 +1,7 @@
 import '../Models/Leerdoel.dart';
 import '../Models/Module.dart';
 
-class CreateLeerdoelModel{
+class CreateLeerdoelDTO{
 
   int module_id;
   String name;

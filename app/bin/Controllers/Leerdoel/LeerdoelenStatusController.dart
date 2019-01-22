@@ -1,4 +1,4 @@
-import '../../Repositories/LeerdoelRepository.dart';
+import '../../Singletons/Repositories.dart';
 import '../Modules/ModuleSpecificController.dart';
 
 class LeerdoelenStatusController extends ModuleSpecificController{
@@ -11,8 +11,8 @@ class LeerdoelenStatusController extends ModuleSpecificController{
   @override
   Future<Object> GET(Map<String, dynamic> args) async{
 
-    List used = await new LeerdoelRepository().GetAllUsedLeerdoelen(args["id"]);
-    List unused = await new LeerdoelRepository().GetAllUnusedLeerdoelen(args["id"]);
+    List used = await Repositories.I().Leerdoelen.GetAllUsedLeerdoelen(args["id"]);
+    List unused = await Repositories.I().Leerdoelen.GetAllUnusedLeerdoelen(args["id"]);
 
     return {
       "used" : used,

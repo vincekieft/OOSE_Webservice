@@ -1,6 +1,6 @@
 import '../Models/Opleiding.dart';
 
-class CreateOpleidingModel{
+class CreateOpleidingSTO{
   String name;
   int year;
 

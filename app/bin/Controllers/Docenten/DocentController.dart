@@ -1,8 +1,7 @@
 import 'package:OOSE/JSON/JSON.dart';
 import 'package:OOSE/Router/Router.dart';
-import '../../Database/DB.dart';
-import '../../Models/Docent.dart';
-import '../../RequestModels/CreateDocentModel.dart';
+import '../../DataTransferObjects/CreateDocentDTO.dart';
+import '../../Singletons/Repositories.dart';
 
 class DocentController implements IController, IPostRequest{
 
@@ -13,8 +12,8 @@ class DocentController implements IController, IPostRequest{
 
   @override
   Future<Object> POST(Map<String, dynamic> args) {
-    CreateDocentModel create = JSON.Decode<CreateDocentModel>(args["body"]);
-    DB.orm.Persist<Docent>(create.ToDocent());
+    CreateDocentDTO create = JSON.Decode<CreateDocentDTO>(args["body"]);
+    Repositories.I().Docenten.PersistDocent(create.ToDocent());
     return null;
   }
 

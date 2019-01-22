@@ -1,4 +1,4 @@
-import '../../Repositories/StudentRepository.dart';
+import '../../Singletons/Repositories.dart';
 import '../Modules/ModuleSpecificController.dart';
 
 class ModuleUnusedStudentsController extends ModuleSpecificController{
@@ -9,6 +9,6 @@ class ModuleUnusedStudentsController extends ModuleSpecificController{
 
   @override
   Future<Object> GET(Map<String, dynamic> args) async{
-    return await new StudentRepository().GetAllUnusedModuleStudents(args["id"]);
+    return await Repositories.I().Studenten.GetAllUnusedModuleStudents(args["id"]);
   }
 }

@@ -1,8 +1,7 @@
 import 'package:OOSE/JSON/JSON.dart';
 import 'package:OOSE/Router/Router.dart';
-import '../../Database/DB.dart';
-import '../../Models/Opleiding.dart';
-import '../../RequestModels/CreateOpleidingModel.dart';
+import '../../DataTransferObjects/CreateOpleidingDTO.dart';
+import '../../Singletons/Repositories.dart';
 
 class OpleidingController implements IController, IPostRequest{
 
@@ -13,8 +12,8 @@ class OpleidingController implements IController, IPostRequest{
 
   @override
   Future<Object> POST(Map<String, dynamic> args) {
-    CreateOpleidingModel create = JSON.Decode<CreateOpleidingModel>(args["body"]);
-    DB.orm.Persist<Opleiding>(create.ToOpleiding());
+    CreateOpleidingSTO create = JSON.Decode<CreateOpleidingSTO>(args["body"]);
+    Repositories.I().Opleidingen.PersistOpleiding(create.ToOpleiding());
     return null;
   }
 

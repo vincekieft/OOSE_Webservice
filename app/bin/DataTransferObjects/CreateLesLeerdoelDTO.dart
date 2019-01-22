@@ -2,7 +2,7 @@ import '../Models/Leerdoel.dart';
 import '../Models/Les.dart';
 import '../Models/LesLeerdoel.dart';
 
-class CreateLesLeerdoelModel{
+class CreateLesLeerdoelDTO{
   int goal_id;
 
   LesLeerdoel ToLesLeerdoel(int lesId){

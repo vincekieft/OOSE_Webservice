@@ -1,7 +1,5 @@
-import 'package:OOSE/ORM/src/QueryBuilder/ORMQueryBuilder.dart';
 import 'package:OOSE/Router/Router.dart';
-import '../../Database/DB.dart';
-import '../../Models/Opleiding.dart';
+import '../../Singletons/Repositories.dart';
 
 class OpleidingSpecificController implements IController, IGetRequest{
 
@@ -12,9 +10,7 @@ class OpleidingSpecificController implements IController, IGetRequest{
 
   @override
   Future<Object> GET(Map<String, dynamic> args) async {
-    ORMQueryBuilder<Opleiding> builder = DB.orm.StartQuery<Opleiding>();
-    builder.Where().Equal("id", args["id"]);
-    return await builder.ExecuteSingle();
+    return await Repositories.I().Opleidingen.GetOpleidingById(args["id"]);
   }
 
 }

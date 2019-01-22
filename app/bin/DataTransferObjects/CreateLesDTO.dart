@@ -2,7 +2,7 @@ import '../Models/Document.dart';
 import '../Models/Les.dart';
 import '../Models/Module.dart';
 
-class CreateLesModel{
+class CreateLesDTO{
   DateTime date;
   String content;
   int module_id;

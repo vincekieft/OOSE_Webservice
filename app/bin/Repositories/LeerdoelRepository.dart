@@ -2,10 +2,13 @@ import 'package:OOSE/ORM/src/QueryBuilder/ORMQueryBuilder.dart';
 import 'package:OOSE/QueryBuilder/QueryBuilder.dart';
 import '../Database/DB.dart';
 import '../Models/Leerdoel.dart';
+import '../Models/LesLeerdoel.dart';
 import '../Models/Module.dart';
+import '../RepositoryInterfaces/ILeerdoelRepository.dart';
 
-class LeerdoelRepository{
+class LeerdoelRepository implements ILeerdoelRepository{
 
+  @override
   Future<List<Leerdoel>> GetAllModuleLeerdoelen(int moduleId) async{
     ORMQueryBuilder<Leerdoel> builder = DB.orm.StartQuery<Leerdoel>();
     builder.LeftJoin(Module).EqualColumn("module_id", "id");
@@ -13,6 +16,7 @@ class LeerdoelRepository{
     return await builder.Execute();
   }
 
+  @override
   Future<List<Leerdoel>> GetAllUsedLeerdoelen(int moduleId) async{
     ORMQueryBuilder<Leerdoel> builder = DB.orm.StartQuery<Leerdoel>();
     builder.LeftJoin(Module).EqualColumn("module_id", "id");
@@ -23,6 +27,7 @@ class LeerdoelRepository{
     return await builder.Execute();
   }
 
+  @override
   Future<List<Leerdoel>> GetAllLesUnusedLeerdoelen(int lesId) async{
     ORMQueryBuilder<Leerdoel> builder = DB.orm.StartQuery<Leerdoel>();
     builder.LeftJoin(Module).EqualColumn("module_id", "id");
@@ -30,6 +35,7 @@ class LeerdoelRepository{
     return await builder.Execute();
   }
 
+  @override
   Future<List<Leerdoel>> GetAllUnusedLeerdoelen(int moduleId) async{
     ORMQueryBuilder<Leerdoel> builder = DB.orm.StartQuery<Leerdoel>();
     builder.LeftJoin(Module).EqualColumn("module_id", "id");
@@ -40,6 +46,7 @@ class LeerdoelRepository{
     return await builder.Execute();
   }
 
+  @override
   Future<List<Leerdoel>> GetAllLesLeerdoelen(int lesId) async{
     ORMQueryBuilder<Leerdoel> builder = DB.orm.StartQuery<Leerdoel>();
     builder.LeftJoin(Module).EqualColumn("module_id", "id");
@@ -47,8 +54,18 @@ class LeerdoelRepository{
     return await builder.Execute();
   }
 
-  // Private methods
+  @override
+  void AddLeerdoelToLes(LesLeerdoel leerdoel) {
+    DB.orm.Persist<LesLeerdoel>(leerdoel);
+  }
 
+  @override
+  void PersistLeerdoel(Leerdoel leerdoel) {
+    DB.orm.Persist<Leerdoel>(leerdoel);
+  }
+
+  // Private methods
+  
   QueryBuilder _GetAllLesLeerdoelenForLes(int lesId){
     QueryBuilder subQuery = new QueryBuilder("LesLeerdoel");
     subQuery.Select().SetColumn("leerdoel_id");

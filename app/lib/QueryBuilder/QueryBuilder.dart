@@ -63,8 +63,8 @@ class QueryBuilder{
   }
 
   JoinSection Join(String table, String type){
-    int tableIndex = _AddTargetTable(table);
-    JoinSection join = _ensureSectionArgs<JoinSection>([type, tableIndex, this], table);
+    _AddTargetTable(table);
+    JoinSection join = _ensureSectionArgs<JoinSection>([type, table, this], table);
     return join;
   }
 

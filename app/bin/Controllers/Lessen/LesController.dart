@@ -1,9 +1,7 @@
 import 'package:OOSE/JSON/JSON.dart';
 import 'package:OOSE/Router/Router.dart';
-
-import '../../Database/DB.dart';
-import '../../Models/Les.dart';
-import '../../RequestModels/CreateLesModel.dart';
+import '../../DataTransferObjects/CreateLesDTO.dart';
+import '../../Singletons/Repositories.dart';
 
 class LesController implements IController, IPostRequest{
 
@@ -14,8 +12,8 @@ class LesController implements IController, IPostRequest{
 
   @override
   Future<Object> POST(Map<String, dynamic> args) {
-    CreateLesModel create = JSON.Decode<CreateLesModel>(args["body"]);
-    DB.orm.Persist<Les>(create.ToLes());
+    CreateLesDTO create = JSON.Decode<CreateLesDTO>(args["body"]);
+    Repositories.I().Lessen.PersistLes(create.ToLes());
     return null;
   }
 
