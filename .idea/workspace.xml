@@ -2,70 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7255ee1b-2e50-46e5-a5c0-138a02f9614b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/bin/RepositoryInterfaces/IDocentRepository.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/bin/RepositoryInterfaces/ILeerdoelRepository.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/bin/RepositoryInterfaces/ILesRepository.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/bin/RepositoryInterfaces/IModulesRepository.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/bin/RepositoryInterfaces/IOpleidingRepository.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/bin/RepositoryInterfaces/IStudentRepository.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/bin/Singletons/Repositories.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/lib/QueryBuilder/tests/ArrayUtils_test.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/lib/QueryBuilder/tests/Criteria_test.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/lib/QueryBuilder/tests/Delete_test.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/lib/QueryBuilder/tests/Insert_test.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/lib/QueryBuilder/tests/Join_test.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/lib/QueryBuilder/tests/Select_test.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/lib/QueryBuilder/tests/Where_test.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/Controllers/Docenten/DocentController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Controllers/Docenten/DocentController.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/Controllers/Docenten/DocentenController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Controllers/Docenten/DocentenController.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/Controllers/Docenten/LesDocentController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Controllers/Docenten/LesDocentController.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/Controllers/Docenten/LesDocentenUnusedController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Controllers/Docenten/LesDocentenUnusedController.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/Controllers/Leerdoel/LeerdoelController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Controllers/Leerdoel/LeerdoelController.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/Controllers/Leerdoel/LeerdoelenController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Controllers/Leerdoel/LeerdoelenController.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/Controllers/Leerdoel/LeerdoelenStatusController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Controllers/Leerdoel/LeerdoelenStatusController.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/Controllers/Leerdoel/LesLeerdoelController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Controllers/Leerdoel/LesLeerdoelController.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/Controllers/Leerdoel/LesUnusedLeerdoelenController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Controllers/Leerdoel/LesUnusedLeerdoelenController.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/Controllers/Leerdoel/ModuleLeerdoelenController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Controllers/Leerdoel/ModuleLeerdoelenController.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/Controllers/Lessen/LesController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Controllers/Lessen/LesController.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/Controllers/Lessen/LesSpecificController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Controllers/Lessen/LesSpecificController.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/Controllers/Lessen/LessenController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Controllers/Lessen/LessenController.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/Controllers/Modules/EducationModulesController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Controllers/Modules/EducationModulesController.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/Controllers/Modules/ModuleController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Controllers/Modules/ModuleController.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/Controllers/Modules/ModuleSpecificController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Controllers/Modules/ModuleSpecificController.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/Controllers/Modules/ModulesController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Controllers/Modules/ModulesController.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/Controllers/Opleidingen/OpleidingController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Controllers/Opleidingen/OpleidingController.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/Controllers/Opleidingen/OpleidingSpecificController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Controllers/Opleidingen/OpleidingSpecificController.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/Controllers/Opleidingen/OpleidingenController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Controllers/Opleidingen/OpleidingenController.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/Controllers/Studenten/ModuleStudentController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Controllers/Studenten/ModuleStudentController.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/Controllers/Studenten/ModuleUnusedStudentsController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Controllers/Studenten/ModuleUnusedStudentsController.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/Controllers/Studenten/StudentController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Controllers/Studenten/StudentController.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/Controllers/Studenten/StudentenController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Controllers/Studenten/StudentenController.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/Repositories/DocentRepository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Repositories/DocentRepository.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/Repositories/LeerdoelRepository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Repositories/LeerdoelRepository.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/Repositories/LesRepository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Repositories/LesRepository.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/Repositories/ModulesRepository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Repositories/ModulesRepository.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/Repositories/OpleidingRepository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Repositories/OpleidingRepository.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/Repositories/StudentRepository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/Repositories/StudentRepository.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/RequestModels/CreateDocentModel.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/RequestModels/CreateLeerdoelModel.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/RequestModels/CreateLesDocentModel.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/RequestModels/CreateLesLeerdoelModel.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/RequestModels/CreateLesModel.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/RequestModels/CreateModuleModel.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/RequestModels/CreateModuleStudentModel.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/RequestModels/CreateOpleidingModel.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/RequestModels/CreateStudentModel.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/ORM/ORM.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/ORM/ORM.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/QueryBuilder/QueryBuilder.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/QueryBuilder/QueryBuilder.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/QueryBuilder/src/Criteria.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/QueryBuilder/src/Criteria.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/QueryBuilder/src/QuerySections/DeleteSection.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/QueryBuilder/src/QuerySections/DeleteSection.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/QueryBuilder/src/QuerySections/InsertSection.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/QueryBuilder/src/QuerySections/InsertSection.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/QueryBuilder/src/QuerySections/JoinSection.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/QueryBuilder/src/QuerySections/JoinSection.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/QueryBuilder/src/QuerySections/SelectSection.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/QueryBuilder/src/QuerySections/SelectSection.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/QueryBuilder/src/QuerySections/UpdateSection.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/QueryBuilder/src/QuerySections/UpdateSection.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/QueryBuilder/src/Utils/ArrayUtils.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/QueryBuilder/src/Utils/ArrayUtils.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/tests/Test_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/bin/service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/service.dart" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -106,70 +43,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DocentRepository.dart" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/bin/Repositories/DocentRepository.dart">
+      <file leaf-file-name="service.dart" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/bin/service.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="38" column="3" selection-start-line="38" selection-start-column="3" selection-end-line="38" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LeerdoelRepository.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/bin/Repositories/LeerdoelRepository.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="64" column="3" selection-start-line="64" selection-start-column="3" selection-end-line="64" selection-end-column="3" />
+            <state relative-caret-position="68">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
               <folding>
-                <element signature="e#0#64#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LesRepository.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/bin/Repositories/LesRepository.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="24" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ModulesRepository.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/bin/Repositories/ModulesRepository.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="11" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="11" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OpleidingRepository.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/bin/Repositories/OpleidingRepository.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StudentRepository.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/bin/Repositories/StudentRepository.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="577">
-              <caret line="39" column="25" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="25" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
+                <element signature="e#0#30#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -226,7 +106,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/lib/QueryBuilder/src/Criteria.dart" />
         <option value="$PROJECT_DIR$/app/lib/QueryBuilder/src/Utils/ArrayUtils.dart" />
         <option value="$PROJECT_DIR$/app/lib/QueryBuilder/tests/ArrayUtils_test.dart" />
         <option value="$PROJECT_DIR$/app/bin/Controllers/Docenten/DocentenController.dart" />
@@ -277,6 +156,7 @@
         <option value="$PROJECT_DIR$/app/bin/Controllers/Opleidingen/OpleidingSpecificController.dart" />
         <option value="$PROJECT_DIR$/app/bin/Repositories/LeerdoelRepository.dart" />
         <option value="$PROJECT_DIR$/app/bin/Repositories/DocentRepository.dart" />
+        <option value="$PROJECT_DIR$/app/bin/service.dart" />
       </list>
     </option>
   </component>
@@ -318,13 +198,6 @@
               <item name="OOSE_Webservice" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="bin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OOSE_Webservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OOSE_Webservice" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="bin" type="462c0819:PsiDirectoryNode" />
-              <item name="Repositories" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -462,12 +335,12 @@
       <workItem from="1547765083564" duration="36817000" />
       <workItem from="1547839116443" duration="4985000" />
       <workItem from="1547846303684" duration="1380000" />
-      <workItem from="1547848046621" duration="77956000" />
+      <workItem from="1547848046621" duration="78058000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="438608000" />
+    <option name="totallyTimeSpent" value="438710000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -493,9 +366,9 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Run" order="4" sideWeight="0.7859375" weight="0.18627451" />
       <window_info anchor="bottom" id="Version Control" order="13" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.65416664" visible="true" weight="0.12200436" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.65416664" visible="true" weight="0.45969498" />
       <window_info anchor="bottom" id="Database Console" order="0" sideWeight="0.5833333" weight="0.34858388" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2609375" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2609375" />
       <window_info anchor="bottom" id="Find" order="3" sideWeight="0.49427083" weight="0.2603486" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="4" side_tool="true" />
@@ -597,16 +470,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/bin/Router/IRouter.dart">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/bin/service.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/bin/Router/OOSERouter.dart">
       <provider selected="true" editor-type-id="text-editor">
@@ -952,6 +815,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="38" column="3" selection-start-line="38" selection-start-column="3" selection-end-line="38" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bin/service.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
