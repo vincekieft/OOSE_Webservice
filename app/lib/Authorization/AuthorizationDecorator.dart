@@ -1,25 +1,25 @@
 import 'package:OOSE/Authorization/AuthorizationUser.dart';
-import 'package:OOSE/Authorization/IProtectedFunction.dart';
+import 'package:OOSE/Authorization/IFunctionality';
 import 'package:OOSE/Authorization/IUserSource.dart';
 import 'package:OOSE/Authorization/Right.dart';
 
-  class AuthorizationDecorator implements IProtectedFunction{
+  class AuthorizationDecorator<T> implements IFunctionality<T>{
 
   // Private variables
-  IProtectedFunction _protected;
+  IFunctionality _protected;
   IUserSource _userSource;
   Right _accessRight;
 
-  AuthorizationDecorator(IProtectedFunction protected, Right accessRight, IUserSource userSource){
+  AuthorizationDecorator(IFunctionality protected, Right accessRight, IUserSource userSource){
     _protected = protected;
     _userSource = userSource;
     _accessRight = accessRight;
   }
 
   @override
-  void ProtectedFunction(arguments) {
+  T Execute (arguments) {
     _VerifyUserRights(_userSource, _accessRight);
-    _protected.ProtectedFunction(arguments); // Call protected function since user has the right to use it
+    return _protected.Execute(arguments); // Call protected function since user has the right to use it
   }
 
   // Private methods

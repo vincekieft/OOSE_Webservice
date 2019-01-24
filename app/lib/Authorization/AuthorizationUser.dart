@@ -14,7 +14,7 @@ class AuthorizationUser{
    * Checks whether user has access to right
    */
   bool HasAccessToRight(Right accessRight){
-    if(_userRights == null){ return null; } // Guard clause to protect from empty list
+    if(_userRights == null){ return false; } // Guard clause to protect from empty list
 
     for(Right right in _userRights){
       if(right == accessRight){
@@ -24,7 +24,4 @@ class AuthorizationUser{
 
     return false;
   }
-
-  // Getters
-  List<Right> get UserRights => _userRights;
 }
