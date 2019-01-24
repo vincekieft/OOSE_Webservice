@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7255ee1b-2e50-46e5-a5c0-138a02f9614b" name="Default" comment="">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/app/lib/Authorization/tests/AuthorizationDecorator_test.dart" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/lib/Authorization/tests/AuthorizationUser_test.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -16,6 +17,14 @@
       <change beforePath="" afterPath="$PROJECT_DIR$/app/lib/DocumentBuilder/StructuredObjectDocument.dart" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
 >>>>>>> 11889369a36acf91474e1ed76515dfc0c22e329d
+=======
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/lib/DocumentBuilder/HTMLCompiler.dart" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/lib/DocumentBuilder/tests/DocumentBuilder_test.dart" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/lib/DocumentBuilder/tests/HTMLCompiler_test.dart" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/app/lib/DocumentBuilder/DocumentCompilerTemplate.dart" afterPath="$PROJECT_DIR$/app/lib/DocumentBuilder/DocumentCompilerTemplate.dart" />
+      <change beforePath="$PROJECT_DIR$/app/lib/DocumentBuilder/StructuredObjectDocument.dart" afterPath="$PROJECT_DIR$/app/lib/DocumentBuilder/StructuredObjectDocument.dart" />
+>>>>>>> bfe7ab6ec4ffb121d563fa54b0a7c93348cb2ebc
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,6 +64,7 @@
         <entry file="file://$PROJECT_DIR$/app/lib/Authorization/tests/AuthorizationDecorator_test.dart">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state relative-caret-position="255">
               <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
               <folding>
@@ -62,6 +72,9 @@
               </folding>
 =======
             <state relative-caret-position="132">
+=======
+            <state relative-caret-position="0">
+>>>>>>> bfe7ab6ec4ffb121d563fa54b0a7c93348cb2ebc
               <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
               <folding />
 >>>>>>> 11889369a36acf91474e1ed76515dfc0c22e329d
@@ -106,6 +119,7 @@
         </entry>
       </file>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <file leaf-file-name="AuthorizationDecorator.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/lib/Authorization/AuthorizationDecorator.dart">
           <provider selected="true" editor-type-id="text-editor">
@@ -115,10 +129,13 @@
                 <element signature="e#0#59#0" expanded="true" />
 =======
       <file leaf-file-name="DataStructureBuilder.dart" pinned="false" current-in-tab="true">
+=======
+      <file leaf-file-name="DataStructureBuilder.dart" pinned="false" current-in-tab="false">
+>>>>>>> bfe7ab6ec4ffb121d563fa54b0a7c93348cb2ebc
         <entry file="file://$PROJECT_DIR$/app/lib/DocumentBuilder/DataStructureBuilder.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+            <state relative-caret-position="363">
+              <caret line="11" column="15" lean-forward="false" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
               <folding>
                 <element signature="e#0#60#0" expanded="true" />
 >>>>>>> 11889369a36acf91474e1ed76515dfc0c22e329d
@@ -127,6 +144,7 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <file leaf-file-name="Criteria_test.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/lib/QueryBuilder/tests/Criteria_test.dart">
@@ -139,23 +157,48 @@
 =======
       <file leaf-file-name="DocumentCompilerTemplate.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/lib/DocumentBuilder/DocumentCompilerTemplate.dart">
+=======
+      <file leaf-file-name="HTMLCompiler.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/lib/DocumentBuilder/HTMLCompiler.dart">
+>>>>>>> bfe7ab6ec4ffb121d563fa54b0a7c93348cb2ebc
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="20" column="28" lean-forward="false" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+            <state relative-caret-position="1386">
+              <caret line="42" column="16" lean-forward="false" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
               <folding>
-                <element signature="e#0#60#0" expanded="true" />
+                <element signature="e#0#68#0" expanded="true" />
+                <marker date="1548369739388" expanded="true" signature="762:786" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StructuredObjectDocument.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/lib/DocumentBuilder/StructuredObjectDocument.dart">
+      <file leaf-file-name="HTMLCompiler_test.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/lib/DocumentBuilder/tests/HTMLCompiler_test.dart">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="99">
               <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
 >>>>>>> 11889369a36acf91474e1ed76515dfc0c22e329d
+=======
+            <state relative-caret-position="468">
+              <caret line="23" column="4" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="62" />
+              <folding>
+                <element signature="e#0#64#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DocumentBuilder_test.dart" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/lib/DocumentBuilder/tests/DocumentBuilder_test.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="39">
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="45" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#64#0" expanded="true" />
+              </folding>
+>>>>>>> bfe7ab6ec4ffb121d563fa54b0a7c93348cb2ebc
             </state>
           </provider>
         </entry>
@@ -217,12 +260,15 @@
     <option name="CHANGED_PATHS">
       <list>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         <option value="$PROJECT_DIR$/app/bin/Controllers/Studenten/StudentenController.dart" />
         <option value="$PROJECT_DIR$/app/bin/Controllers/Studenten/ModuleUnusedStudentsController.dart" />
         <option value="$PROJECT_DIR$/app/lib/ORM/ORM.dart" />
         <option value="$PROJECT_DIR$/app/lib/ORM/src/DatabaseAdapters/MysqlAdapter.dart" />
         <option value="$PROJECT_DIR$/app/bin/Testing/TestRepositories/TestLesRepository.dart" />
+=======
+>>>>>>> bfe7ab6ec4ffb121d563fa54b0a7c93348cb2ebc
         <option value="$PROJECT_DIR$/app/bin/Testing/TestRepositories/TestModuleRepository.dart" />
         <option value="$PROJECT_DIR$/app/bin/Testing/TestRepositories/TestOpleidingRepository.dart" />
         <option value="$PROJECT_DIR$/app/bin/Testing/TestRepositories/TestStudentRepository.dart" />
@@ -279,9 +325,14 @@
         <option value="$PROJECT_DIR$/app/lib/Authorization/tests/AuthorizationUser_test.dart" />
         <option value="$PROJECT_DIR$/app/lib/Authorization/AuthorizationUser.dart" />
         <option value="$PROJECT_DIR$/app/lib/DocumentBuilder/StructuredObject.dart" />
-        <option value="$PROJECT_DIR$/app/lib/DocumentBuilder/StructuredObjectDocument.dart" />
-        <option value="$PROJECT_DIR$/app/lib/DocumentBuilder/DataStructureBuilder.dart" />
+        <option value="$PROJECT_DIR$/app/lib/DocumentBuilder/tests/DataStructureBuilder_test.dart" />
         <option value="$PROJECT_DIR$/app/lib/DocumentBuilder/DocumentCompilerTemplate.dart" />
+        <option value="$PROJECT_DIR$/app/lib/DocumentBuilder/tests/HTMLCompiler.dart" />
+        <option value="$PROJECT_DIR$/app/lib/DocumentBuilder/DataStructureBuilder.dart" />
+        <option value="$PROJECT_DIR$/app/lib/DocumentBuilder/StructuredObjectDocument.dart" />
+        <option value="$PROJECT_DIR$/app/lib/DocumentBuilder/tests/HTMLCompiler_test.dart" />
+        <option value="$PROJECT_DIR$/app/lib/DocumentBuilder/HTMLCompiler.dart" />
+        <option value="$PROJECT_DIR$/app/lib/DocumentBuilder/tests/DocumentBuilder_test.dart" />
       </list>
     </option>
   </component>
@@ -295,7 +346,7 @@
     <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-11" />
     <option name="width" value="1942" />
     <option name="height" value="2091" />
@@ -334,6 +385,9 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> bfe7ab6ec4ffb121d563fa54b0a7c93348cb2ebc
             <path>
               <item name="OOSE_Webservice" type="b2602c69:ProjectViewProjectNode" />
               <item name="OOSE_Webservice" type="462c0819:PsiDirectoryNode" />
@@ -345,18 +399,28 @@
               <item name="OOSE_Webservice" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="Authorization" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="DocumentBuilder" type="462c0819:PsiDirectoryNode" />
+>>>>>>> bfe7ab6ec4ffb121d563fa54b0a7c93348cb2ebc
             </path>
             <path>
               <item name="OOSE_Webservice" type="b2602c69:ProjectViewProjectNode" />
               <item name="OOSE_Webservice" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="Authorization" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
 =======
 >>>>>>> 11889369a36acf91474e1ed76515dfc0c22e329d
+=======
+              <item name="DocumentBuilder" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+>>>>>>> bfe7ab6ec4ffb121d563fa54b0a7c93348cb2ebc
           </expand>
           <select />
         </subPane>
@@ -529,20 +593,29 @@
       <workItem from="1548367478607" duration="1465000" />
 =======
       <workItem from="1548318356469" duration="12318000" />
+<<<<<<< HEAD
       <workItem from="1548363468231" duration="2901000" />
 >>>>>>> 11889369a36acf91474e1ed76515dfc0c22e329d
+=======
+      <workItem from="1548363468231" duration="6868000" />
+>>>>>>> bfe7ab6ec4ffb121d563fa54b0a7c93348cb2ebc
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="459800000" />
 =======
     <option name="totallyTimeSpent" value="455194000" />
 >>>>>>> 11889369a36acf91474e1ed76515dfc0c22e329d
+=======
+    <option name="totallyTimeSpent" value="459161000" />
+>>>>>>> bfe7ab6ec4ffb121d563fa54b0a7c93348cb2ebc
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="0" width="1942" height="2091" extended-state="0" />
+    <frame x="-13" y="-13" width="3866" height="2106" extended-state="6" />
+    <editor active="true" />
     <layout>
 <<<<<<< HEAD
       <window_info anchor="right" id="Palette" order="3" />
@@ -589,10 +662,10 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18627451" sideWeight="0.7859375" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Floobits" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33260393" sideWeight="0.65416664" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3298969" sideWeight="0.65416664" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35940918" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17510661" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25929978" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -628,6 +701,7 @@
   </component>
   <component name="editorHistoryManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/lib/QueryBuilder/tests/Criteria_test.dart">
 =======
     <entry file="file://$PROJECT_DIR$/app/lib/Authorization/IUserSource.dart">
@@ -638,6 +712,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> bfe7ab6ec4ffb121d563fa54b0a7c93348cb2ebc
     <entry file="file://$PROJECT_DIR$/app/lib/Authorization/AuthorizationUser.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="429">
@@ -974,6 +1050,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/lib/Authorization/tests/AuthorizationUser_test.dart">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="401">
           <caret line="38" column="44" lean-forward="true" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
           <folding>
@@ -981,6 +1058,9 @@
           </folding>
 =======
         <state relative-caret-position="132">
+=======
+        <state relative-caret-position="0">
+>>>>>>> bfe7ab6ec4ffb121d563fa54b0a7c93348cb2ebc
           <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
           <folding />
 >>>>>>> 11889369a36acf91474e1ed76515dfc0c22e329d
@@ -1008,6 +1088,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/DocumentBuilder/tests/DataStructureBuilder_test.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/lib/DocumentBuilder/StructuredObject.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="429">
@@ -1016,31 +1104,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/DocumentBuilder/StructuredObjectDocument.dart">
+    <entry file="file://$PROJECT_DIR$/app/lib/DocumentBuilder/DataStructureBuilder.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/DocumentBuilder/DocumentCompilerTemplate.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="20" column="28" lean-forward="false" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+        <state relative-caret-position="363">
+          <caret line="11" column="15" lean-forward="false" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
           <folding>
             <element signature="e#0#60#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/DocumentBuilder/DataStructureBuilder.dart">
+    <entry file="file://$PROJECT_DIR$/app/lib/DocumentBuilder/StructuredObjectDocument.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        <state relative-caret-position="132">
+          <caret line="4" column="74" lean-forward="true" selection-start-line="4" selection-start-column="74" selection-end-line="4" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/DocumentBuilder/DocumentCompilerTemplate.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
             <element signature="e#0#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/DocumentBuilder/HTMLCompiler.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1386">
+          <caret line="42" column="16" lean-forward="false" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
+          <folding>
+<<<<<<< HEAD
+            <element signature="e#0#60#0" expanded="true" />
 >>>>>>> 11889369a36acf91474e1ed76515dfc0c22e329d
+=======
+            <element signature="e#0#68#0" expanded="true" />
+            <marker date="1548369739388" expanded="true" signature="762:786" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/DocumentBuilder/tests/HTMLCompiler_test.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="23" column="4" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="62" />
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/DocumentBuilder/tests/DocumentBuilder_test.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="45" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
+>>>>>>> bfe7ab6ec4ffb121d563fa54b0a7c93348cb2ebc
           </folding>
         </state>
       </provider>

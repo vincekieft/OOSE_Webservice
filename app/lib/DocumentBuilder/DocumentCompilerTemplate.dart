@@ -10,15 +10,13 @@ abstract class DocumentCompilerTemplate {
   /**
    * Travels the document structure
    */
-  travel(StructuredObjectDocument document){
-    document.parents.forEach((parent){
-      compile(parent);
-      parent.children.forEach((object)=>compile(object));
-    });
+  void travel(StructuredObjectDocument document,[Function callback]){
+    Function method = (callback==null)? compile : callback;
+    document.parents.forEach((parent)=>method(parent));
   }
 
   /**
    * Abstract compile method
    */
-  compile(StructuredObject object);
+  void compile(StructuredObject object);
 }
