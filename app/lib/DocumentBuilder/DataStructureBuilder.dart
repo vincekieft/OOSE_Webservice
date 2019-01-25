@@ -3,19 +3,19 @@ import 'package:OOSE/DocumentBuilder/StructuredObjectDocument.dart';
 
 class DataStructureBuilder{
 
-  StructuredObjectDocument document = new StructuredObjectDocument();
+  StructuredObjectDocument _document = new StructuredObjectDocument();
 
   /**
    * Adds a structured object to the document
    */
   void addStructure(StructuredObject object){
-    document.parents.add(object);
+    _document.parents.add(object);
   }
 
   /**
    * Returns document
    */
   StructuredObjectDocument build(){
-    return document;
+    return _document;
   }
 }

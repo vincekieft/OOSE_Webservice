@@ -1,5 +1,5 @@
 import 'package:OOSE/Authorization/AuthorizationUser.dart';
-import 'package:OOSE/Authorization/IFunctionality';
+import 'package:OOSE/Authorization/IFunctionality.dart';
 import 'package:OOSE/Authorization/IUserSource.dart';
 import 'package:OOSE/Authorization/Right.dart';
 

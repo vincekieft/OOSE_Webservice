@@ -11,25 +11,25 @@ class HTMLCompiler extends DocumentCompilerTemplate{
 
   @override
   void compile(StructuredObject object) {
-    _output+=buildElement(object);
+    _output+=_buildElement(object);
   }
 
   /**
    * Builds a single element with all its childs
    */
-  String buildElement(StructuredObject object){
-    String body = (object.value!=null)? object.value : buildBodyFromChilds(object.children);
-    String attributes = buildAttributes(object.attributes);
+  String _buildElement(StructuredObject object){
+    String body = (object.value!=null) ? object.value : _buildBodyFromChilds(object.children);
+    String attributes = _buildAttributes(object.attributes);
     return "<${object.type}${attributes}>${body}</${object.type}>";
   }
 
   /**
    * Builds the element body
    */
-  String buildBodyFromChilds(List<StructuredObject> object){
+  String _buildBodyFromChilds(List<StructuredObject> objects){
     String result = "";
-    object.forEach((object){
-      result+=buildElement(object);
+    objects.forEach((object){
+      result+=_buildElement(object);
     });
     return result;
   }
@@ -37,7 +37,7 @@ class HTMLCompiler extends DocumentCompilerTemplate{
   /**
    * Builds attributes
    */
-  String buildAttributes(Map<String,String> attributes){
+  String _buildAttributes(Map<String,String> attributes){
     String result="";
     attributes.forEach((key,value){
       result+=" \"${key}\"=\"${value}\"";
