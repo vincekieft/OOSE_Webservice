@@ -9,9 +9,8 @@ void main(){
     TestUser user = new TestUser("Henk");
     TestUserAdapter adapter = new TestUserAdapter(user);
     DataStructureBuilder builder = new DataStructureBuilder();
-    StructuredObject object = adapter.createWelcomeWidget();
 
-    builder.addStructure(object);
+    builder.addStructure(adapter);
     StructuredObjectDocument document = builder.build();
 
     HTMLCompiler compiler = new HTMLCompiler(document);
@@ -29,19 +28,15 @@ class TestUser{
   }
 }
 
-class TestUserAdapter{
+class TestUserAdapter extends StructuredObject{
 
   TestUser get testUser=>_testUser;
   TestUser _testUser;
 
   TestUserAdapter(TestUser testUser){
     _testUser = testUser;
-  }
 
-  StructuredObject createWelcomeWidget(){
-    StructuredObject titleObject = new StructuredObject();
-    titleObject.type = "h1";
-    titleObject.value = "Hallo ${testUser.name}";
-    return titleObject;
+    type = "h1";
+    value = "Hallo ${testUser.name}";
   }
 }
